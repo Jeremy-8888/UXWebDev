@@ -5,68 +5,70 @@
 		<title>NYP Airsoft Club - Home</title>
 	</head>
 	<body>
-		<h1 class="pagetitle">NYP Airsoft Club - Home</h1>
 		<form class="accountcontrols">
 			<label>
 				<input type="text" id="username" required>
 				&gt; Name
 			</label>
 			<label>
-				<input type="text" id="password">
+				<input type="password" id="password">
 				&gt; Password
 			</label>
 			<input type="submit" value="Submit">
 		</form>
-		<nav class="navbar">
-			<ul>
-				<li>
-					<a href="home.html">Home</a>
-				</li>
-				<li>
-					<a href="attendance.html">Attendance</a>
-				</li>
-				<li>
-					<a href="schedule.html">Schedule</a>
-				</li>
-				<li>
-					<a href="resources.html">Resources</a>
-				</li>
-				<li>
-					<a href="news.html">news</a>
-				</li>
-			</ul>
-		</nav>
+		<header>
+			<h1 class="pagetitle">NYP Airsoft Club - Home</h1>
+			<nav class="navbar">
+				<ul>
+					<li>
+						<a href="home.html">Home</a>
+					</li>
+					<li>
+						<a href="attendance.html">Attendance</a>
+					</li>
+					<li>
+						<a href="schedule.html">Schedule</a>
+					</li>
+					<li>
+						<a href="resources.html">Resources</a>
+					</li>
+					<li>
+						<a href="news.html">news</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
 		<a class="sitemaplink" href="sitemap.html">sitemap</a>
 		<div id="maincontent">
 			<fieldset class="windowdisplay" id="mainwindow">
 				<legend id="windowtitle">Welcome Home</legend>
-				<div>
+				<section>
 					<img src="TODO.jpg" alt="CCA Logo (Fix if u see this)">
-				</div>
-				<div>
+				</section>
+				<section id="buttonselection">
 					<ul>
-						<li><input type="button" value="About CCA"/></li>
+						<li><button>About CCA</button></li>
 					</ul>
 					<ul>
-						<li><input type="button" value="Key Members"/></li>
+						<li><button>Key Members</button></li>
 					</ul>
 					<ul>
-						<li><input type="button" value="Instructors"/></li>
+						<li><button>Instructors</button></li>
 					</ul>
 					<ul>
-						<li><input type="button" value="Social Media"/></li>
+						<li><button>Social Media</button></li>
 					</ul>
-				</div>
-				<div>
+				</section>
+				<section>
 					<h2>About CCA</h2>
 					<p>Paragraph regarding CCA bla bla bla...TODO</p>
-				</div>
-				<div>
+				</section>
+				<section>
 					<img src="TODO.png" alt="CCA Banner (Fix if u see this)">
-				</div>
+				</section>
 			</fieldset>	
 		</div>
-		<div id="sidecontent">
+		<aside id="sidecontent">
 			<fieldset class="windowdisplay" id="sidewindow">
 				<legend id="windowtitle">Side Panel</legend>
 				<div class="panelitem">
@@ -75,20 +77,20 @@
 				</div>
 				<div class="panelitem">
 					<h2>News</h2>
-					<div class="newsitem">
+					<article class="newsitem">
 						<p>news item 1</p>
-					</div>
+					</article>
 					<hr>
-					<div class="newsitem">
+					<article class="newsitem">
 						<p>news item 2</p>
-					</div>
+					</article>
 					<hr>
-					<div class="newsitem">
+					<article class="newsitem">
 						<p>news item 3</p>
-					</div>
+					</article>
 				</div>
 			</fieldset>
-		</div>
+		</aside>
 		<div id="bottomwindows">
 			<fieldset class="windowdisplay" id="contactwindow">
 				<legend>Contact Us</legend>
@@ -106,36 +108,37 @@
 			</fieldset>
 			<fieldset class="windowdisplay" id="forumcomments">
 				<legend>Latest Comments</legend>
-				<h3 class="commentsnipet" id="lastcomment1">
+				<h2 class="commentsnipet" id="lastcomment1">
 					User1234 on "Article Name" at YYYY/MM/DD says:
-				</h3>
+				</h2>
 				<p>
 					Hello world
 				</p>
 				<hr>
-				<h3 class="commentsnipet" id="lastcomment2">
+				<h2 class="commentsnipet" id="lastcomment2">
 					User1234 on "Article Name" at YYYY/MM/DD says:
-				</h3>
+				</h2>
 				<p>
 					Hello world (1)
 				</p>
 				<hr>
-				<h3 class="commentsnipet" id="lastcomment3">
+				<h2 class="commentsnipet" id="lastcomment3">
 					User1234 on "Article Name" at YYYY/MM/DD says:
-				</h3>
+				</h2>
 				<p>
 					Hello world (2)
 				</p>
 				<hr>
-				<h3 class="commentsnipet" id="lastcomment4">
+				<h2 class="commentsnipet" id="lastcomment4">
 					User1234 on "Article Name" at YYYY/MM/DD says:
-				</h3>
+				</h2>
 				<p>
 					Hello world (3)
 				</p>
 			</fieldset>
 		</div>
 		<footer>
+			<p>&copy; 2025 NYP Airsoft Club. All rights reserved.</p>
 			<img src="nyplogotransparent.png" alt="NYP logo (add img later)">
 		</footer>
 	</body>
