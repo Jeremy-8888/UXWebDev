@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<title>NYP Airsoft Club - Home</title>
 	<link rel="stylesheet" type="text/css" href="CSSExternal.css">
-	<script src="home.js"></script>
+	<script src="scripts/home.js"></script>
 </head>
 
 <body>
@@ -17,7 +17,7 @@
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="home.html">
-				<i class="fas fa-crosshairs me-2"></i>School Airsoft Club
+				<i class="fas fa-crosshairs me-2"></i>NYP Airsoft Club
 			</a>
 			<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 				<li><a class="nav-link active" href="home.html">Home</a>
@@ -32,21 +32,7 @@
 			</ul>
 		</div>
 	</nav>
-
-
-	<!-- form class="accountcontrols">
-		<label>
-			<input type="text" id="username" required>
-			&gt; Name
-		</label>
-		<label>
-			<input type="password" id="password">
-			&gt; Password
-		</label>
-		<input type="submit" value="Submit">
-		<a class="sitemaplink" href="sitemap.html">sitemap</a>
-	</form -->
-	<header class="jumboimage" style="background-image: url('airsoft_bg.jpg')">
+	<header class="jumboimage" style="background-image: url('media/airsoft_bg.jpg')">
 		<div class="jumbotext">
 			<h1 class="jumbotext-title">Nanyang Polytechnic Airsoft Club</h1>
 			<p id="jumbotext-foot">Welcome Home<p>
@@ -55,96 +41,86 @@
 	<br>
 	<main id="maincontent">
 		<div class="windowcollection">	
-			<div class="window">
+			<div class="window wind_buttons">
 				<ul class="buttonselection">
-					<li><button>About CCA</button></li>
-					<li><button>Key Members</button></li>
-					<li><button>Instructors</button></li>
-					<li><button>Social Media</button></li>
+					<li><button onclick="showCorrectWindows('winds_aboutcca')">About CCA</button></li>
+					<li><button onclick="showCorrectWindows('winds_keymembs')">Key Members</button></li>
+					<li><button onclick="showCorrectWindows('winds_instruct')">Instructors</button></li>
+					<li><button onclick="showCorrectWindows('winds_soclmeds')">Social Media</button></li>
 				</ul>
 			</div>
-			<div class="window">
-				<h1>Hello there</h1>
+			<!--About CCA-->
+			<div class="window winds_aboutcca">
+				<h1>About CCA</h1>
 				<p>text text text</p>
 			</div>
-			<div class="window">
-				<h1>Hello again</h1>
+			<div class="window winds_aboutcca" >
+				<h1>Hello 0</h1>
+				<p>More text text</p>
+			</div>
+			<!--Key Members-->
+			<div class="window winds_keymembs" style="display: none;">
+				<h1>Key Members</h1>
+				<p>text text text</p>
+			</div>
+			<div class="window winds_keymembs" style="display: none;">
+				<h1>Hello 1</h1>
+				<p>More text text</p>
+			</div>
+			<!--Instructors-->
+			<div class="window winds_instruct" style="display: none;">
+				<h1>Instructors</h1>
+				<p>text text text</p>
+			</div>
+			<div class="window winds_instruct" style="display: none;">
+				<h1>Hello 2</h1>
+				<p>More text text</p>
+			</div>
+			<!--Social Media-->
+			<div class="window winds_soclmeds" style="display: none;">
+				<h1>Social Media</h1>
+				<p>text text text</p>
+			</div>
+			<div class="window winds_soclmeds" style="display: none;">
+				<h1>Hello 3</h1>
 				<p>More text text</p>
 			</div>
 		</div>
-			
-
-		<fieldset class="windowdisplay" id="mainwindow">
-			<section>
-				<img src="TODO.jpg" alt="CCA Logo (Fix if u see this)">
-			</section>
-
-			<section>
-				<h2>About CCA</h2>
-				<p>Paragraph regarding CCA bla bla bla...TODO</p>
-			</section>
-			<section>
-				<img src="TODO.png" alt="CCA Banner (Fix if u see this)">
-			</section>
-		</fieldset>
+		<br>
+		<hr>
+		<br>
+		<div class="slideshowcollection">
+			<button class="slidebutton" id="slidebutton-back">&lt</button>
+			<div class="slideshow-item slide-visible" id="slide-obj1">
+				<img src="media/airsoft_bg.jpg" alt="Breaching">
+				<div class="slideshow-item-text">
+					<h2>Article title 1</h2>
+					<article>
+						this is the article
+					</article>
+				</div>
+			</div>
+			<div class="slideshow-item" id="slide-obj2">
+				<img src="https://i.makeagif.com/media/5-06-2014/Z5l4mh.gif" alt="Breaching">
+				<div class="slideshow-item-text">
+					<h2>Article title 2</h2>
+					<article>
+						this is the article
+					</article>
+				</div>
+			</div>
+			<div class="slideshow-item" id="slide-obj3">
+				<img src="media/airsoft-panorama.jpg" alt="Wide imgage">
+				<div class="slideshow-item-text">
+					<h2>Article title 3</h2>
+					<article>
+						this is the article
+					</article>
+				</div>
+			</div>
+			<button class="slidebutton" id="slidebutton-next">&gt</button>
+		</div>
 	</main>
-	<aside id="sidecontent">
-		<fieldset class="windowdisplay" id="sidewindow">
-			<legend id="windowtitle">Side Panel</legend>
-			<div class="panelitem">
-				<h2>Annoucements</h2>
-				<p>announcement paragraph here...</p>
-			</div>
-			<div class="panelitem">
-				<h2>News</h2>
-				<article class="newsitem">
-					<p>news item 1</p>
-				</article>
-				<hr>
-				<article class="newsitem">
-					<p>news item 2</p>
-				</article>
-				<hr>
-				<article class="newsitem">
-					<p>news item 3</p>
-				</article>
-			</div>
-		</fieldset>
-	</aside>
-	<div id="bottomwindows">
-		<fieldset class="windowdisplay" id="forumcomments">
-			<legend>Latest Comments</legend>
-			<h2 class="commentsnipet" id="lastcomment1">
-				User1234 on "Article Name" at YYYY/MM/DD says:
-			</h2>
-			<p>
-				Hello world
-			</p>
-			<hr>
-			<h2 class="commentsnipet" id="lastcomment2">
-				User1234 on "Article Name" at YYYY/MM/DD says:
-			</h2>
-			<p>
-				Hello world (1)
-			</p>
-			<hr>
-			<h2 class="commentsnipet" id="lastcomment3">
-				User1234 on "Article Name" at YYYY/MM/DD says:
-			</h2>
-			<p>
-				Hello world (2)
-			</p>
-			<hr>
-			<h2 class="commentsnipet" id="lastcomment4">
-				User1234 on "Article Name" at YYYY/MM/DD says:
-			</h2>
-			<p>
-				Hello world (3)
-			</p>
-		</fieldset>
-	</div>
-
-
 
 	<!-- Footer -->
 	<footer class="bg-dark text-white pt-5 pb-4">
