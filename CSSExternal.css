@@ -1,7 +1,100 @@
-/* Content Styling */
-.content {
-	text-align: center;
+/* Jumbos */
+.jumboimage {
+	background-position: center 20%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 60vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
+
+.jumbotext {
+	text-align: center;
+	color: white;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.jumbotext .jumbotext-title {
+	font-size: 55pt;
+	font-weight:200;
+}
+
+.jumbotext #jumbotext-foot {
+	margin-top: 40px;
+	font-size: 20pt;
+	font-weight: 300;
+}
+
+/* Windows */
+
+.windowcollection {
+	padding-left: 55vh;
+	display: flex;
+	gap: 10px;
+}
+
+.window {
+	margin-top: 80px;
+	padding: 40px;
+	float: left;
+	box-shadow: 0px 10px 10px 5px #88888854;
+}
+
+.window ul.buttonselection {
+	list-style-type: none;
+	margin:0px;
+	padding:0px;
+	min-height: 40vh;
+}
+
+.window ul.buttonselection>li>button {
+	background-color: #0d1f09;
+	border-radius: 15%;
+	color: #ffffff;
+	padding: 10px 30px;
+	width: 100%;
+	text-align: center;
+	text-decoration: none;
+	font-size: 15px;
+}
+
+ul.buttonselection>li>button:hover {
+	background-color: #505050;
+}
+
+/*.hwind-left {
+	position:absolute;
+	top: 30%;
+	display: inline-block;
+	left: 20%;
+	background-color: #747575b4;
+}
+
+ul.buttonselection {
+	list-style-type: none;
+	margin:0px;
+	padding-top:30px;
+	padding-bottom:80%;
+	padding-left:40px;
+	padding-right:40px;
+}
+
+ul.buttonselection>li>button {
+	background-color: #3a3a3a;
+	border-radius: 15%;
+	color: #ffffff;
+	padding: 10px 30px;
+	width: 100%;
+	text-align: center;
+	text-decoration: none;
+	font-size: 15px;
+}
+
+ul.buttonselection>li>button:hover {
+	background-color: #505050;
+}*/
+
 
 /* Navigation bar styles */
 #navbar {

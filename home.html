@@ -1,222 +1,207 @@
 <!DOCTYPE html>
 <html lang="en-sg">
-	<head>
-		<meta charset="UTF-8">
-		<title>NYP Airsoft Club - Home</title>
-		<link rel="stylesheet" type="text/css" href="CSSExternal.css">
-	</head>
-	<body>
-		<!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-		<!-- Navigation bar -->
+
+<head>
+	<meta charset="UTF-8">
+	<title>NYP Airsoft Club - Home</title>
+	<link rel="stylesheet" type="text/css" href="CSSExternal.css">
+	<script src="home.js"></script>
+</head>
+
+<body>
+	<!-- Bootstrap 5 CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Font Awesome for icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<!-- Navigation bar -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="home.html">
+				<i class="fas fa-crosshairs me-2"></i>School Airsoft Club
+			</a>
+			<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+				<li><a class="nav-link active" href="home.html">Home</a>
+				</li>
+				<li><a class="nav-link" href="news.html">News</a>
+				</li>
+				<li><a class="nav-link" href="contact.html">Contact</a>
+				</li>
+				<li>
+					<a class="nav-link" href="about.html">About</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
 
 
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="home.html">
-      <i class="fas fa-crosshairs me-2"></i>School Airsoft Club
-    </a>
-    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-      <li><a class="nav-link active" href="home.html">Home</a>
-      </li>
-      <li><a class="nav-link" href="news.html">News</a>
-      </li>
-      <li><a class="nav-link" href="contact.html">Contact</a>
-      </li>
-      <li>
-        <a class="nav-link" href="about.html">About</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-		<form class="accountcontrols">
-			<label>
-				<input type="text" id="username" required>
-				&gt; Name
-			</label>
-			<label>
-				<input type="password" id="password">
-				&gt; Password
-			</label>
-			<input type="submit" value="Submit">
-		</form>
-		<header>
-			<h1 class="pagetitle">NYP Airsoft Club - Home</h1>
-			<nav class="navbar">
-				<ul>
-					<li>
-						<a href="home.html">Home</a>
-					</li>
-					<li>
-						<a href="attendance.html">Attendance</a>
-					</li>
-					<li>
-						<a href="schedule.html">Schedule</a>
-					</li>
-					<li>
-						<a href="resources.html">Resources</a>
-					</li>
-					<li>
-						<a href="news.html">News</a>
-					</li>
-				</ul>
-			</nav>
-		</header>
+	<!-- form class="accountcontrols">
+		<label>
+			<input type="text" id="username" required>
+			&gt; Name
+		</label>
+		<label>
+			<input type="password" id="password">
+			&gt; Password
+		</label>
+		<input type="submit" value="Submit">
 		<a class="sitemaplink" href="sitemap.html">sitemap</a>
-		<div id="maincontent">
-			<fieldset class="windowdisplay" id="mainwindow">
-				<legend id="windowtitle">Welcome Home</legend>
-				<section>
-					<img src="TODO.jpg" alt="CCA Logo (Fix if u see this)">
-				</section>
-				<section id="buttonselection">
-					<ul>
-						<li><button>About CCA</button></li>
-					</ul>
-					<ul>
-						<li><button>Key Members</button></li>
-					</ul>
-					<ul>
-						<li><button>Instructors</button></li>
-					</ul>
-					<ul>
-						<li><button>Social Media</button></li>
-					</ul>
-				</section>
-				<section>
-					<h2>About CCA</h2>
-					<p>Paragraph regarding CCA bla bla bla...TODO</p>
-				</section>
-				<section>
-					<img src="TODO.png" alt="CCA Banner (Fix if u see this)">
-				</section>
-			</fieldset>	
+	</form -->
+	<header class="jumboimage" style="background-image: url('airsoft_bg.jpg')">
+		<div class="jumbotext">
+			<h1 class="jumbotext-title">Nanyang Polytechnic Airsoft Club</h1>
+			<p id="jumbotext-foot">Welcome Home<p>
 		</div>
-		<aside id="sidecontent">
-			<fieldset class="windowdisplay" id="sidewindow">
-				<legend id="windowtitle">Side Panel</legend>
-				<div class="panelitem">
-					<h2>Annoucements</h2>
-					<p>announcement paragraph here...</p>
-				</div>
-				<div class="panelitem">
-					<h2>News</h2>
-					<article class="newsitem">
-						<p>news item 1</p>
-					</article>
-					<hr>
-					<article class="newsitem">
-						<p>news item 2</p>
-					</article>
-					<hr>
-					<article class="newsitem">
-						<p>news item 3</p>
-					</article>
-				</div>
-			</fieldset>
-		</aside>
-		<div id="bottomwindows">
-			<fieldset class="windowdisplay" id="contactwindow">
-				<legend>Contact Us</legend>
-				<ul>
-					<li>
-						<img src="mail.png" alt="mail png (fix if visible)">
-						<a href="mailto:nypac@cca.nyp.edu.sg">E-mail</a>
-					</li>
-					<hr>
-					<li>
-						<img src="phone.png" alt="phone png (fix if visible)">
-						+65 1234 5678
-					</li>
+	</header>
+	<br>
+	<main id="maincontent">
+		<div class="windowcollection">	
+			<div class="window">
+				<ul class="buttonselection">
+					<li><button>About CCA</button></li>
+					<li><button>Key Members</button></li>
+					<li><button>Instructors</button></li>
+					<li><button>Social Media</button></li>
 				</ul>
-			</fieldset>
-			<fieldset class="windowdisplay" id="forumcomments">
-				<legend>Latest Comments</legend>
-				<h2 class="commentsnipet" id="lastcomment1">
-					User1234 on "Article Name" at YYYY/MM/DD says:
-				</h2>
-				<p>
-					Hello world
-				</p>
-				<hr>
-				<h2 class="commentsnipet" id="lastcomment2">
-					User1234 on "Article Name" at YYYY/MM/DD says:
-				</h2>
-				<p>
-					Hello world (1)
-				</p>
-				<hr>
-				<h2 class="commentsnipet" id="lastcomment3">
-					User1234 on "Article Name" at YYYY/MM/DD says:
-				</h2>
-				<p>
-					Hello world (2)
-				</p>
-				<hr>
-				<h2 class="commentsnipet" id="lastcomment4">
-					User1234 on "Article Name" at YYYY/MM/DD says:
-				</h2>
-				<p>
-					Hello world (3)
-				</p>
-			</fieldset>
+			</div>
+			<div class="window">
+				<h1>Hello there</h1>
+				<p>text text text</p>
+			</div>
+			<div class="window">
+				<h1>Hello again</h1>
+				<p>More text text</p>
+			</div>
 		</div>
-		<!-- Footer -->
-    <footer class="bg-dark text-white pt-5 pb-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <h5 style="font-size: 1.1em;"><i class="fas fa-crosshairs me-2"></i>Nanyang Polytechnic Airsoft Club</h5>
-                    <p>Developing tactical skills, marksmanship, teamwork and discipline through airsoft.</p>
-                    <div class="social-links">
-                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6 mb-4">
-                    <h5>Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="home.html" class="text-white">Home</a></li>
-                        <li class="mb-2"><a href="about.html" class="text-white">About Us</a></li>
-                        <li class="mb-2"><a href="contacts.html" class="text-white">Contacts</a></li>
-                        <li class="mb-2"><a href="news.html" class="text-white">Club News</a></li>
-                        <li><a href="https://www.nyp.edu.sg/student/life/co-curricular-activities" class="text-white">Join us!</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <h5>Contact Us</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2" style="font-size:85%;"><i class="fas fa-envelope me-2"></i> NYPAirsoft@mymail.nyp.edu.sg</li>
-                        <li class="mb-2"><i class="fas fa-phone me-2"></i> (+65) 96120013</li>
-                        <li><i class="fas fa-map-marker-alt me-2"></i> NYP Block E, Level 3, E307 </li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <h5>Meeting Times</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2">Friday: 6.30pm - 8.30pm</li>
-                        <li>Saturdays: 12pm - 4pm (external venue)</li>
-                    </ul>
-                </div>
-            </div>
-            <hr class="mt-0 mb-4">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0">&copy; 2025 Nanyang Polytechnic Airsoft Club. All rights reserved.</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <p class="mb-0">Safety First | Sportsmanship Always</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+			
 
-    <!-- Bootstrap 5 JS Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-		
-	</body>
+		<fieldset class="windowdisplay" id="mainwindow">
+			<section>
+				<img src="TODO.jpg" alt="CCA Logo (Fix if u see this)">
+			</section>
+
+			<section>
+				<h2>About CCA</h2>
+				<p>Paragraph regarding CCA bla bla bla...TODO</p>
+			</section>
+			<section>
+				<img src="TODO.png" alt="CCA Banner (Fix if u see this)">
+			</section>
+		</fieldset>
+	</main>
+	<aside id="sidecontent">
+		<fieldset class="windowdisplay" id="sidewindow">
+			<legend id="windowtitle">Side Panel</legend>
+			<div class="panelitem">
+				<h2>Annoucements</h2>
+				<p>announcement paragraph here...</p>
+			</div>
+			<div class="panelitem">
+				<h2>News</h2>
+				<article class="newsitem">
+					<p>news item 1</p>
+				</article>
+				<hr>
+				<article class="newsitem">
+					<p>news item 2</p>
+				</article>
+				<hr>
+				<article class="newsitem">
+					<p>news item 3</p>
+				</article>
+			</div>
+		</fieldset>
+	</aside>
+	<div id="bottomwindows">
+		<fieldset class="windowdisplay" id="forumcomments">
+			<legend>Latest Comments</legend>
+			<h2 class="commentsnipet" id="lastcomment1">
+				User1234 on "Article Name" at YYYY/MM/DD says:
+			</h2>
+			<p>
+				Hello world
+			</p>
+			<hr>
+			<h2 class="commentsnipet" id="lastcomment2">
+				User1234 on "Article Name" at YYYY/MM/DD says:
+			</h2>
+			<p>
+				Hello world (1)
+			</p>
+			<hr>
+			<h2 class="commentsnipet" id="lastcomment3">
+				User1234 on "Article Name" at YYYY/MM/DD says:
+			</h2>
+			<p>
+				Hello world (2)
+			</p>
+			<hr>
+			<h2 class="commentsnipet" id="lastcomment4">
+				User1234 on "Article Name" at YYYY/MM/DD says:
+			</h2>
+			<p>
+				Hello world (3)
+			</p>
+		</fieldset>
+	</div>
+
+
+
+	<!-- Footer -->
+	<footer class="bg-dark text-white pt-5 pb-4">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 mb-4">
+					<h5 style="font-size: 1.1em;"><i class="fas fa-crosshairs me-2"></i>Nanyang Polytechnic Airsoft Club
+					</h5>
+					<p>Developing tactical skills, marksmanship, teamwork and discipline through airsoft.</p>
+					<div class="social-links">
+						<a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+						<a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+						<a href="#" class="text-white me-3"><i class="fab fa-youtube"></i></a>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-6 mb-4">
+					<h5>Quick Links</h5>
+					<ul class="list-unstyled">
+						<li class="mb-2"><a href="home.html" class="text-white">Home</a></li>
+						<li class="mb-2"><a href="about.html" class="text-white">About Us</a></li>
+						<li class="mb-2"><a href="contacts.html" class="text-white">Contacts</a></li>
+						<li class="mb-2"><a href="news.html" class="text-white">Club News</a></li>
+						<li><a href="https://www.nyp.edu.sg/student/life/co-curricular-activities"
+								class="text-white">Join us!</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-3 col-md-6 mb-4">
+					<h5>Contact Us</h5>
+					<ul class="list-unstyled">
+						<li class="mb-2" style="font-size:85%;"><i class="fas fa-envelope me-2"></i>
+							NYPAirsoft@mymail.nyp.edu.sg</li>
+						<li class="mb-2"><i class="fas fa-phone me-2"></i> (+65) 96120013</li>
+						<li><i class="fas fa-map-marker-alt me-2"></i> NYP Block E, Level 3, E307 </li>
+					</ul>
+				</div>
+				<div class="col-lg-3 col-md-6 mb-4">
+					<h5>Meeting Times</h5>
+					<ul class="list-unstyled">
+						<li class="mb-2">Friday: 6.30pm - 8.30pm</li>
+						<li>Saturdays: 12pm - 4pm (external venue)</li>
+					</ul>
+				</div>
+			</div>
+			<hr class="mt-0 mb-4">
+			<div class="row">
+				<div class="col-md-6 text-center text-md-start">
+					<p class="mb-0">&copy; 2025 Nanyang Polytechnic Airsoft Club. All rights reserved.</p>
+				</div>
+				<div class="col-md-6 text-center text-md-end">
+					<p class="mb-0">Safety First | Sportsmanship Always</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Bootstrap 5 JS Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
 </html>
