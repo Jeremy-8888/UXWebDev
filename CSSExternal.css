@@ -1,3 +1,8 @@
+/* Content Styling */
+.content {
+	text-align: center;
+}
+
 /* Navigation bar styles */
 #navbar {
     list-style-type: none;
