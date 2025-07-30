@@ -5,9 +5,9 @@
 
 ## TODO
 ### Homepage
-- [ ] Separate non-window specific JS stuff->pages can share scripts
+- [ ] Separate non-window specific JS stuff->pages can share scripts (optional)
 - [X] Improve window hiding
-- [ ] Add jump to sections on jumbotron
+- [X] Add jump to sections on jumbotron
 - [ ] Add links to signup/login on jumbotron
 - [ ] Add text and images
 ### Attendance
