@@ -9,9 +9,9 @@ function showCorrectWindows(windclass) {
 
 		// check if correct window, un-none the display
 		if (window.classList.contains(windclass)) 
-			window.setAttribute("style", null);
-		else if (!window.classList.contains("wind_buttons")) // dumb hack to prevent
-			window.setAttribute("style", "display: none;")   // hiding the buttons
+			window.classList.remove("window-sethidden");
+		else if (!window.classList.contains("wind_buttons")) // dumb hack to prevent hidding buttons window
+			window.classList.add("window-sethidden");
 	}
 }
 
@@ -41,8 +41,8 @@ function iterateSlide(forward) {
 		else currSlideIdx = LEN - 1;
 	}
 
-	document.getElementById(slides[currSlideIdx]).className = 
-		"slideshow-item slide-visible";
+	document.getElementById(slides[currSlideIdx]).classList
+		.add("slide-visible");
 }
 
 function main() {
