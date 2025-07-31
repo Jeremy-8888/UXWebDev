@@ -25,11 +25,26 @@
 	font-size: 60pt;
 }
 
+.jumbolinks {
+	margin-top: 3%;
+}
+
 .jumbolinks a {
-	background-color: green;
-	color: #adb5bd;
+	background-color: darkgreen;
+	color: #ffffff;
 	text-decoration:none;
-	padding: 1vh;
+	padding: 15px;
+	margin: 5vw;
+	border-radius: 32px;
+	border-style: outset;
+	border-color: #022b16;
+	border-width: 5px;
+}
+
+.jumbolinks a:hover{
+	border-style: inset;
+	background-color: green;
+	border-color: rgb(0, 78, 0);
 }
 
 .jumbojumpto {
