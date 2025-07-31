@@ -5,10 +5,12 @@
 
 ## TODO
 ### Homepage
-- [ ] Separate non-window specific JS stuff->pages can share scripts (optional)
+- [ ] (optional)Separate non-window specific JS stuff->pages can share scripts
+- [ ] (optional)Rewrite CCA info buttons to use radios
 - [X] Improve window hiding
 - [X] Add jump to sections on jumbotron
 - [X] Add links to signup/login on jumbotron
+- [ ] Autoscrolling articles
 - [ ] Add text and images
 ### Attendance
 - [ ] .
