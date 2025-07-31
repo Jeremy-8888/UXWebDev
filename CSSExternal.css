@@ -16,13 +16,20 @@
 	text-align: center;
 	background-color: #00000093 ;
 	width: 100%;
-	padding: 5vh;
+	padding: 2%;
 	text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.685);
 	font-weight: lighter;
 }
 
 .jumbotext .jumbotext-title {
 	font-size: 60pt;
+}
+
+.jumbolinks a {
+	background-color: green;
+	color: #adb5bd;
+	text-decoration:none;
+	padding: 1vh;
 }
 
 .jumbojumpto {
@@ -38,7 +45,7 @@
 .jumbojumpto a {
 	letter-spacing: 0.2rem;
 	color: rgb(214, 214, 214);
-	margin:33vh;
+	margin:15%;
 }
 
 /* Windows */
@@ -51,8 +58,8 @@
 }
 
 .window {
-	margin-top: 80px;
-	padding: 40px;
+	margin-top: 8vh;
+	padding: 100px;
 	float: left;
 	box-shadow: 0px 10px 50px 5px #88888854;
 }
@@ -100,7 +107,7 @@
 	display: none;
 	flex-direction: row;
 	align-items: center;
-	column-gap: 32vh;
+	column-gap: 15vw;
 }
 
 .slideshowcollection .slide-visible {
