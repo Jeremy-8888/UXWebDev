@@ -10,7 +10,7 @@
 - [X] Improve window hiding
 - [X] Add jump to sections on jumbotron
 - [X] Add links to signup/login on jumbotron
-- [ ] Autoscrolling articles
+- [X] Autoscrolling articles
 - [X] Add text and images
 ### Attendance
 - [ ] .

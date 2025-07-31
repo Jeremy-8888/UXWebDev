@@ -1,4 +1,4 @@
-
+var slideAutoScroll;
 var currSlideIdx = 0;
 var slides = [];
 
@@ -46,13 +46,14 @@ function iterateSlide(forward) {
 }
 
 function main() {
+	slideAutoScroll = window.setInterval(function() {iterateSlide(true)}, 10000); // 10 sec
 	loadSlidesInfo();
 
 	document.getElementById("slidebutton-back").addEventListener(
-		"click", function() {iterateSlide(false);}
+		"click", function() {iterateSlide(false); window.clearInterval(slideAutoScroll);}
 	);
 	document.getElementById("slidebutton-next").addEventListener(
-		"click", function() {iterateSlide(true);}
+		"click", function() {iterateSlide(true); window.clearInterval(slideAutoScroll)}
 	);
 
 
