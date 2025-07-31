@@ -159,7 +159,7 @@
 	display: none;
 	flex-direction: row;
 	align-items: center;
-	column-gap: 15vw;
+	column-gap: 8vw;
 }
 
 .slideshowcollection .slide-visible {
@@ -190,6 +190,14 @@
 	transform: translateY(-50%); /* thank you StackOverflow */
 	top: 50%;
 	z-index: 255;
+}
+
+.slideshow-item-text {
+	max-width: 600px;
+}
+
+.slideshow-item-text>article>a {
+	color: yellowgreen;
 }
 
 .slideshowcollection .slidebutton:hover {

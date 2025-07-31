@@ -11,7 +11,7 @@
 - [X] Add jump to sections on jumbotron
 - [X] Add links to signup/login on jumbotron
 - [ ] Autoscrolling articles
-- [ ] Add text and images
+- [X] Add text and images
 ### Attendance
 - [ ] .
 ### Login/Sign up
