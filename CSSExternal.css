@@ -456,3 +456,9 @@ footer a:hover {
     background-color: #000000;
     color: white;
 }
+
+/* Contact Information Links Hover */
+.card-body a.text-dark:hover {
+    color: #6c757d !important;
+    transition: color 0.3s ease;
+}
