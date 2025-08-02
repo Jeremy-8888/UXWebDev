@@ -29,13 +29,144 @@
   </div>
 </nav>
 
-<div class="content">
-    <h1>Contact Us</h1>
-    <p> President VP Treasurer Manpower ic all in a tree form and their contacts and photos and shiet Email: contact@example.com</p>
-    <p>Phone: 123-456-7890</p>
+<div class="container mt-4 fadeInFromTop">
+    <div class="content">
+        <div class="content text-center py-5 fade-in-content">
+    <div class="container">
+        <h1 class="display-4 fw-bold mb-4" style="color: #022b16; text-shadow: 1px 1px 3px rgba(0,0,0,0.1);">About Our Club</h1>
+        <p class="lead mx-auto" style="max-width: 800px; color: #495057; font-size: 1.2rem; line-height: 1.6;">Welcome to the Nanyang Polytechnic Airsoft Club! We are dedicated to developing tactical skills, marksmanship, teamwork and discipline through the exciting sport of airsoft. Our club follows a strict attendance policy - maintain above 70% attendance to stay active, and achieve above 80% to become a sub-committee member.</p>
+    </div>
+</div>
+    </div>
+
+    <!-- Contact Information Section -->
+    <section class="card mb-4 border-0">
+        <div class="card-body">
+            <h2><i class="fas fa-info-circle me-2"></i>Core Contact Information</h2>
+            <div class="row mt-3">
+                <div class="col-md-4">
+                    <p><i class="fas fa-map-marker-alt me-2"></i> <strong>Location:</strong><br>
+                    Student Activities Center, Room 205<br>
+                    123 School Road, Singapore 123456</p>
+                </div>
+                <div class="col-md-4">
+                    <p><i class="fas fa-phone me-2"></i> <strong>Phone:</strong><br>
+                    +65 6123 4567 (Club Office)<br>
+                    +65 6234 5678 (Activities Hotline)</p>
+                </div>
+                <div class="col-md-4">
+                    <p><i class="fas fa-envelope me-2"></i> <strong>Email:</strong><br>
+                    cca-club@school.edu.sg<br>
+                    cca-events@school.edu.sg</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="card mb-4 border-0">
+        <div class="card-body">
+            <h2><i class="fas fa-question-circle me-2"></i>Frequently Asked Questions</h2>
+            
+            <div class="faq-item mb-3">
+                <div class="faq-question" onclick="toggleFAQ('faq1')">
+                    <h5><i class="fas fa-chevron-down me-2"></i>What equipment do I need to join?</h5>
+                </div>
+                <div class="faq-answer" id="faq1">
+                    <p>For beginners, the club provides basic equipment including airsoft guns, protective eyewear, and face masks. As you progress, you may choose to purchase your own equipment. We'll provide guidance on recommended gear.</p>
+                </div>
+            </div>
+
+            <div class="faq-item mb-3">
+                <div class="faq-question" onclick="toggleFAQ('faq2')">
+                    <h5><i class="fas fa-chevron-down me-2"></i>Is airsoft safe?</h5>
+                </div>
+                <div class="faq-answer" id="faq2">
+                    <p>Safety is our top priority. All participants must wear protective eyewear and follow strict safety protocols. Our experienced instructors ensure all activities are conducted safely with proper supervision.</p>
+                </div>
+            </div>
+
+            <div class="faq-item mb-3">
+                <div class="faq-question" onclick="toggleFAQ('faq3')">
+                    <h5><i class="fas fa-chevron-down me-2"></i>Do I need prior experience?</h5>
+                </div>
+                <div class="faq-answer" id="faq3">
+                    <p>No prior experience is necessary! We welcome complete beginners and provide comprehensive training on safety, equipment handling, and tactical basics. Our experienced members are always happy to help newcomers.</p>
+                </div>
+            </div>
+
+            <div class="faq-item mb-3">
+                <div class="faq-question" onclick="toggleFAQ('faq4')">
+                    <h5><i class="fas fa-chevron-down me-2"></i>What activities does the club organize?</h5>
+                </div>
+                <div class="faq-answer" id="faq4">
+                    <p>We organize weekly training sessions, tactical exercises, team-building activities, inter-school competitions, and social events. Activities range from basic marksmanship to advanced tactical scenarios.</p>
+                </div>
+            </div>
+
+            <div class="faq-item mb-3">
+                <div class="faq-question" onclick="toggleFAQ('faq5')">
+                    <h5><i class="fas fa-chevron-down me-2"></i>How much does it cost to join?</h5>
+                </div>
+                <div class="faq-answer" id="faq5">
+                    <p>Club membership fees are minimal and cover basic equipment rental and venue costs. Additional costs may apply for external events or personal equipment purchases. Contact us for current fee structure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="card mb-4 border-0">
+        <div class="card-body">
+            <h2><i class="fas fa-envelope me-2"></i>Send Us a Message</h2>
+            <div class="row mt-3">
+                <div class="col-12">
+                    <form id="contactForm" onsubmit="submitForm(event)">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Subject</label>
+                            <select class="form-select" id="subject" required>
+                                <option value="" selected disabled>Select a subject</option>
+                                <option value="membership">Membership Inquiry</option>
+                                <option value="event">Event Information</option>
+                                <option value="feedback">Feedback/Suggestions</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                    <div id="formResponse" class="mt-3 alert alert-success" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="card mb-4 border-0">
+        <div class="card-body">
+            <h2><i class="fas fa-hashtag me-2"></i>Connect With Us</h2>
+            <p class="mb-4">Follow us on social media for the latest updates and events!</p>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </section>
 </div>
 
-</body>
 <!-- Footer -->
     <footer class="bg-dark text-white pt-5 pb-4">
         <div class="container">
@@ -47,6 +178,7 @@
                         <a href="https://www.facebook.com/share/1D5cQuvxTA/" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://www.instagram.com/whrsjeremy?igsh=MTJxN2R2aDljand3eA==" class="text-white me-3"><i class="fab fa-instagram"></i></a>
                         <a href="https://youtube.com/@jeremygaming1375?si=22ZjkYmKq0uv2z9c" class="text-white me-3"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com/@nypairsoft" class="text-white me-3"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6 mb-4">
@@ -100,6 +232,7 @@
 
     <!-- Bootstrap 5 JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="Mainjavascript.js"></script>
 		
 	</body>
 </html>

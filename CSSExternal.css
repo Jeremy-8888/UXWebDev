@@ -356,3 +356,103 @@ footer a:hover {
 .fade-in-slow {
 	animation: fadeInFromTop 1.5s ease-out;
 }
+
+/* FAQ Styles */
+.faq-item {
+	border-bottom: 1px solid #e9ecef;
+	margin-bottom: 0.5rem;
+}
+
+.faq-question {
+	padding: 1rem;
+	background-color: #f8f9fa;
+	cursor: pointer;
+	border-radius: 8px;
+	transition: background-color 0.3s ease;
+	font-weight: 500;
+	user-select: none;
+}
+
+.faq-question:hover {
+	background-color: #e9ecef;
+}
+
+.faq-question i {
+	transition: transform 0.3s ease;
+}
+
+.faq-question.active i {
+	transform: rotate(180deg);
+}
+
+.faq-answer {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.4s ease, padding 0.4s ease;
+	background-color: white;
+	border-radius: 0 0 8px 8px;
+}
+
+.faq-answer.show {
+	max-height: 200px;
+	padding: 1rem;
+}
+
+/* Social Media Icons Styles */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    color: #6c757d;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.social-icons a i {
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+/* Individual social media hover colors */
+.social-icons a:hover[href*="facebook"] {
+    background-color: #1877f2;
+    color: white;
+}
+
+.social-icons a:hover[href*="instagram"] {
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    color: white;
+}
+
+.social-icons a:hover[href*="twitter"] {
+    background-color: #1da1f2;
+    color: white;
+}
+
+.social-icons a:hover[href*="youtube"] {
+    background-color: #ff0000;
+    color: white;
+}
+
+.social-icons a:hover[href*="tiktok"] {
+    background-color: #000000;
+    color: white;
+}
