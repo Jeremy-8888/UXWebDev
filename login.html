@@ -4,7 +4,10 @@
 <head>
 	<title>News - My Website</title>
 	<link rel="stylesheet" type="text/css" href="styles/CSSExternal.css">
+	<link rel="stylesheet" type="text/css" href="styles/login.css">
+	<script src="scripts/util.js"></script>
 	<script src="scripts/windows.js"></script>
+	<script src="scripts/login.js"></script>
 </head>
 
 <body>
@@ -31,19 +34,25 @@
 			</ul>
 		</div>
 	</nav>
-	<main id="maincontent">
-		<div class="windowcollection">
-			<div class="window wind_buttons">
-				<ul class="buttonselection">
-					<input type="radio" value="gologin" name="signuplogin">
-					<label for="gologin">Login</label>
-					<br>
-					<input type="radio" value="gosignup" name="signuplogin">
-					<label for="gosignup">Sign Up</label>
-				</ul>
+	<!-- 
+		we set the page to be hidden because JS should complete execution before
+		loading, else certain animations will be broken.
+	-->
+	<main id="maincontent" style="visibility: hidden;">
+		<div id="section-accountactions" class="windowcollection">
+			<div id="wind_buttons" class="window">
+				<div id="windbtns_buttons" class="buttonselection">
+					<button id="signupbtn" class="btn_windows active" onclick="clickSelectWindow('winds_login', this)">Log In</button></br>
+					<button id="loginbtn" class="btn_windows" onclick="clickSelectWindow('winds_signup', this)">Sign Up</button></br>
+				</div>
 			</div>
-			<div class="window signup">
+			<!-- sign in -->
+			<div class="window fade-in-content winds_login">
 				Hello
+			</div>
+			<!-- create account -->
+			<div class="window fade-in-content winds_signup window-sethidden">
+				Hello 2
 			</div>
 		</div>
 	</main>

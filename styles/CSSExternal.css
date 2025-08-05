@@ -106,6 +106,7 @@
 /* Windows */
 
 .windowcollection {
+	margin-bottom: 70px;
 	justify-content: center; 
 	flex-wrap: wrap;
 	display: flex;
@@ -129,13 +130,13 @@
 	display: none;
 }
 
-.window .buttonselection {
+.window>.buttonselection {
 	margin:0px;
 	padding:0px;
 	min-height: 40vh;
 }
 
-.window .buttonselection>button {
+.window>.buttonselection>button {
 	background-color: white;
 	border-radius: 15%;
 	color: black;
