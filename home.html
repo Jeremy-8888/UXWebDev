@@ -50,12 +50,12 @@
 	<main id="maincontent">
 		<div id="section-ccainfo" class="windowcollection">	
 			<div class="window wind_buttons">
-				<ul class="buttonselection">
-					<li><button onclick="showCorrectWindows('winds_aboutcca')">About CCA</button></li>
-					<li><button onclick="showCorrectWindows('winds_keymembs')">Key Members</button></li>
-					<li><button onclick="showCorrectWindows('winds_instruct')">Instructors</button></li>
-					<li><button onclick="showCorrectWindows('winds_soclmeds')">Social Media</button></li>
-				</ul>
+				<div class="buttonselection">
+					<button class="btn_windows active" onclick="showCorrectWindows('winds_aboutcca', this)">About CCA</button></br>
+					<button class="btn_windows" onclick="showCorrectWindows('winds_keymembs', this)">Key Members</button></br>
+					<button class="btn_windows" onclick="showCorrectWindows('winds_instruct', this)">Instructors</button></br>
+					<button class="btn_windows" onclick="showCorrectWindows('winds_soclmeds', this)">Social Media</button>
+				</div>
 			</div>
 			<!--About CCA-->
 			<div class="window winds_aboutcca fade-in-content">
@@ -120,7 +120,7 @@
 			</div>
 			<!--Instructors-->
 			<div class="window winds_instruct window-sethidden fade-in-content">
-				<h1>External Instructors</h1>
+				<h1>External Instructor</h1>
 				<img src="media/oldmanjenkins.png">
 				<h3 style="text-align: center;">Mr. Oman Jenkins</h2>
 			</div>

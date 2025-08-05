@@ -2,11 +2,31 @@ var slideAutoScroll;
 var currSlideIdx = 0;
 var slides = [];
 
-function showCorrectWindows(windclass) {
+function showCorrectWindows(windclass, onBtn) {
 	const WINDOWS = document.getElementsByClassName("window");
+
+	const BUTTONCLASSLIST = onBtn.classList;
+	let buttonClass;
+	for (let i = 0; i < BUTTONCLASSLIST.length; i++) { // determine which button group called the function
+		let thisClass = BUTTONCLASSLIST[i]
+		console.log(thisClass)
+		if (thisClass !== "active") {
+			buttonClass = thisClass;
+			break;
+		}
+	}
+
+	const BUTTONSGROUP = document.getElementsByClassName(buttonClass)
+	for (let i = 0; i < BUTTONSGROUP.length; i++) {
+		let button = BUTTONSGROUP[i];
+		button.classList.remove("active")
+	}
+
+	onBtn.classList.add("active");
+	
+	
 	for (let i = 0; i < WINDOWS.length; i++) {
 		let window = WINDOWS[i];
-
 		// check if correct window, un-none the display
 		if (window.classList.contains(windclass)) 
 			window.classList.remove("window-sethidden");

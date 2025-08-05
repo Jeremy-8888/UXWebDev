@@ -120,14 +120,13 @@
 	display: none;
 }
 
-.window ul.buttonselection {
-	list-style-type: none;
+.window .buttonselection {
 	margin:0px;
 	padding:0px;
 	min-height: 40vh;
 }
 
-.window ul.buttonselection>li>button {
+.window .buttonselection>button {
 	background-color: white;
 	border-radius: 15%;
 	color: black;
@@ -139,8 +138,13 @@
 	font-size: 15px;
 }
 
-.window ul.buttonselection>li>button:hover {
+.window .buttonselection>button:not(.active):hover {
 	background-color: #c4c4c4;
+}
+
+.window .buttonselection>button.active {
+	border-style: none;
+	box-shadow: inset 0px -10px 1px 100px #88888854;
 }
 
 /* slides */
@@ -178,16 +182,16 @@
 
 .slideshowcollection .slidebutton {
 	background-color: #00000000;
-	box-shadow: inset 0px 10px 10px 5px #88888854;;
+	box-shadow: inset 0px 10px 10px 5px #88888854;
 	color: white;
-	border-radius: 20%;
+	border-radius: 5px;
 	font-weight: 100;
 	font-size: 32px;
 	border: none;
-	padding: 125px 15px;
+	padding: 15px 15px;
 	cursor: pointer;
 	position: absolute;
-	transform: translateY(-50%); /* thank you StackOverflow */
+	transform: translateY(-50%);
 	top: 50%;
 	z-index: 255;
 }
