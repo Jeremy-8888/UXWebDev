@@ -1,3 +1,5 @@
+// requires scripts/slides.js
+
 var slideAutoScroll;
 
 function main() {

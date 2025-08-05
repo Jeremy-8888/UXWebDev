@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<title>NYP Airsoft Club - Home</title>
 	<link rel="stylesheet" type="text/css" href="styles/CSSExternal.css">
+	<script src="scripts/util.js"></script>
 	<script src="scripts/windows.js"></script>
 	<script src="scripts/slides.js"></script>
 	<script src="scripts/home.js"></script>
@@ -51,29 +52,32 @@
 	<br>
 	<main id="maincontent">
 		<div id="section-ccainfo" class="windowcollection">	
-			<div class="window wind_buttons">
-				<div class="buttonselection">
-					<button class="btn_windows active" onclick="showCorrectWindows('winds_aboutcca', this)">About CCA</button></br>
-					<button class="btn_windows" onclick="showCorrectWindows('winds_keymembs', this)">Key Members</button></br>
-					<button class="btn_windows" onclick="showCorrectWindows('winds_instruct', this)">Instructors</button></br>
-					<button class="btn_windows" onclick="showCorrectWindows('winds_soclmeds', this)">Social Media</button>
+			<!--Buttons list-->
+			<div id="wind_buttons" class="window">
+				<div id="windbtns_buttons" class="buttonselection">
+					<button class="btn_windows active" onclick="clickSelectWindow('winds_aboutcca', this)">About CCA</button></br>
+					<button class="btn_windows" onclick="clickSelectWindow('winds_keymembs', this)">Key Members</button></br>
+					<button class="btn_windows" onclick="clickSelectWindow('winds_instruct', this)">Instructors</button></br>
+					<button class="btn_windows" onclick="clickSelectWindow('winds_soclmeds', this)">Social Media</button>
 				</div>
 			</div>
 			<!--About CCA-->
-			<div class="window winds_aboutcca fade-in-content">
+			
+			<div class="window fade-in-content winds_aboutcca">
 				<h1>About CCA</h1>
 				<ul>
 					<li>
-						NYP offers the first ever Player versus Player (PvP) airsoft 
-						CCA in Singapore. It is a ONE OF A KIND experience as it is not
-						available in other polytechnics, and <strong>at no charge too!</strong>
+						NYP offers the first ever Player versus Player (PvP) 
+						airsoft CCA in Singapore. It is a ONE OF A KIND experience 
+						as it is not available in other polytechnics, and 
+						<strong>at no charge too!</strong>
 					</li>
 					<br>
 					<li>
 						Airsoft promotes tactical CQB skills as well as teamwork
 						and honesty for everyone else as you navigate through
-						the arena, eliminating your opponents with speed, surprise 
-						and violence of action.
+						the arena, eliminating your opponents with speed,
+						surprise and violence of action.
 					</li>
 					<br>
 					<li>
@@ -87,14 +91,14 @@
 					</li>
 				</ul>
 			</div>
-			<div class="window winds_aboutcca fade-in-content" >
+			<div class="window fade-in-content winds_aboutcca" >
 				<h1>Regarding Airsoft</h1>
 				<p>
 					Airsoft, also known as survival game (Japanese: サバイバルゲーム, 
 					romanized: sabaibaru gēmu) in Japan where it was popular, 
 					is a team-based shooting game in which participants eliminate 
 					opposing players out of play by shooting them with spherical
-					 plastic projectiles shot from airsoft guns.
+					plastic projectiles shot from airsoft guns.
 				</p>
 				<p>
 					Although similar to paintball in concept and gameplay, 
@@ -107,27 +111,28 @@
 					with honesty, fairness and sportsmanship.
 				</p>
 			</div>
+
 			<!--Club committee-->
-			<div class="window winds_keymembs window-sethidden fade-in-content">
+			<div class="window window-sethidden fade-in-content winds_keymembs">
 				<h1>NYP Airsoft CEO</h1>
 				<img src="media/goofy.jpg">
 			</div>
-			<div class="window winds_keymembs window-sethidden fade-in-content">
+			<div class="window window-sethidden fade-in-content winds_keymembs">
 				<h1>President</h1>
 				<img src="media/robba.jpg">
 			</div>
-			<div class="window winds_keymembs window-sethidden fade-in-content">
+			<div class="window window-sethidden fade-in-content winds_keymembs">
 				<h1>The Comittee</h1>
 				<img src="media/da_comittee.jpg">
 			</div>
 			<!--Instructors-->
-			<div class="window winds_instruct window-sethidden fade-in-content">
+			<div class="window window-sethidden fade-in-content winds_instruct">
 				<h1>External Instructor</h1>
 				<img src="media/oldmanjenkins.png">
 				<h3 style="text-align: center;">Mr. Oman Jenkins</h2>
 			</div>
 			<!--Social Media-->
-			<div class="window winds_soclmeds window-sethidden fade-in-content">
+			<div class="window window-sethidden fade-in-content winds_soclmeds">
 				<h1>Social Media</h1>
 				<a href="#" class="custombuttonlink" style="color: darkred;">
 					<img src="media/youtubelogo.png">
@@ -142,13 +147,15 @@
 					<span>Facebook</span>
 				</a>
 			</div>
-			<div class="window winds_soclmeds window-sethidden fade-in-content">
+			<div class="window window-sethidden fade-in-content winds_soclmeds">
 				<h1>Our Contacts</h1>
 				<br>
 				<ul style="list-style: none; margin:0px; padding:0px;">
 					<li>Email
 						<ul><li>
-							<a href="mailto: NYPAirsoft@mymail.nyp.edu.sg">NYPAirsoft@mymail.nyp.edu.sg</a>
+							<a href="mailto: NYPAirsoft@mymail.nyp.edu.sg">
+								NYPAirsoft@mymail.nyp.edu.sg
+							</a>
 						</li></ul>
 					</li>
 					<li>Phone

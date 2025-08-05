@@ -1,30 +1,36 @@
-function showCorrectWindows(windclass, onBtn) {
-	const WINDOWS = document.getElementsByClassName("window");
+// requires scripts/util.js
 
-	const BUTTONCLASSLIST = onBtn.classList;
-	let buttonClass;
-	for (let i = 0; i < BUTTONCLASSLIST.length; i++) { // determine which button group called the function
-		let thisClass = BUTTONCLASSLIST[i]
-		if (thisClass !== "active") {
-			buttonClass = thisClass;
-			break;
-		}
+function clickSelectWindow(targWindow, onBtn) {
+	/* EXPECTED STRUCTURE FOR BUTTONS AND WINDOWS
+		C: windowcollection I:*binding ID for windows* 
+		  C:*any*
+		    C:window I:*buttons parent window ID*
+		      C:buttonselection
+	*/
+
+	const WINDOWSBINDING = getIDofParentClass(onBtn, "windowcollection");
+	const WINDOWCOLLECTION = document.getElementById(WINDOWSBINDING);
+	const WINDOWS = WINDOWCOLLECTION.getElementsByClassName("window");
+
+	// get button group to remove any set actives
+	const BUTTONS = onBtn.parentElement.children
+	for (let i = 0; i < BUTTONS.length; i++) {
+		let thisBtn = BUTTONS[i];
+		thisBtn.classList.remove("active");
 	}
+	const IDBUTTONWINDOW = getIDofParentClass(onBtn, "window");
 
-	const BUTTONSGROUP = document.getElementsByClassName(buttonClass)
-	for (let i = 0; i < BUTTONSGROUP.length; i++) {
-		let button = BUTTONSGROUP[i];
-		button.classList.remove("active")
-	}
+	onBtn.classList.add("active"); // set button as active
 
-	onBtn.classList.add("active");
-	
 	for (let i = 0; i < WINDOWS.length; i++) {
 		let window = WINDOWS[i];
-		// check if correct window, un-none the display
-		if (window.classList.contains(windclass)) 
-			window.classList.remove("window-sethidden");
-		else if (!window.classList.contains("wind_buttons")) // prevent hidding buttons window
-			window.classList.add("window-sethidden");
+		let windowClasses = window.classList;
+		// set visible to target window
+		if (windowClasses.contains(targWindow))	
+			windowClasses.remove("window-sethidden");
+		
+		// leave button window alone when seting window displays to hidden
+		else if (window.id !== IDBUTTONWINDOW &&!windowClasses.contains("window-sethidden")	)
+			windowClasses.add("window-sethidden");
 	}
 }
