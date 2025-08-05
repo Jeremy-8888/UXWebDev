@@ -4,3 +4,8 @@
 	flex-direction: column;
 	justify-content: center;
 }
+
+.window:not(#wind_buttons) {
+	max-width: 60vw;
+	width: 60vw;
+}

@@ -48,7 +48,23 @@
 			</div>
 			<!-- sign in -->
 			<div class="window fade-in-content winds_login">
-				Hello
+				<h1>Welcome Back!</h1>
+				<h4>We're so excited to see you again!</h4>
+				<form>
+					<br>
+					<label for="adminno" class="form-label">
+						Admin Number (6 Numbers + Letter)
+					</label>
+ 					<input 
+						type="text" class="form-control" id="adminno" 
+						pattern="^[0-9]{6}[A-Za-z]$" required
+					>
+					<br>
+					<label for="password" class="form-label">Password</label>
+ 					<input type="password" class="form-control" id="password" required>
+					<br>
+					<button type="submit" class="btn btn-primary">Login!</button>
+				</form>
 			</div>
 			<!-- create account -->
 			<div class="window fade-in-content winds_signup window-sethidden">
