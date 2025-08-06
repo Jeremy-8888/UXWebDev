@@ -110,15 +110,44 @@
 							<input type="date" class="form-control" id="bday" required>
 						</div>
 						<div class="col">
-							<label for="year" class="form-label">Age</label>
+							<label for="age" class="form-label">Age</label>
+							<input type="number" class="form-control" id="age" 
+								min="16" max="100" value="16" required>
 						</div>
 						<div class="col">
 							<label for="year" class="form-label">Year</label>
+							<input type="number" class="form-control" id="age" 
+								min="1" max="3" value="1" required>
 						</div>
 					</div>
-					<br>
-					<br>
-					<button type="submit" class="btn btn-primary">Submit!</button>
+					<div class="row">
+						<div class="col">
+							<label for="password" class="form-label">Password</label>
+							<input type="password" class="form-control" id="class" 
+								placeholder="Choose a secure password!" required>
+						</div>
+						<div class="col">
+							<label for="passwordretype" class="form-label">Retype Password</label>
+							<input type="password" class="form-control" id="class" required>
+						</div>
+					</div>
+					<hr style="visibility: hidden;">
+					<div class="row">
+						<div class="col-md-9">
+							<input class="form-check-input" type="checkbox" 
+								id="hasapplied" required>
+							<label class="form-check-label" for="hasapplied">
+								I submitted a CCA application for NYP Airsoft Club
+								through 
+								<a href="https://studeserv.nyp.edu.sg/SLISCCAOnline/loginservlet">
+									NYP Portal.
+								</a>	
+							</label>
+						</div>
+						<div class="col">
+							<button type="submit" class="btn btn-primary float-end">Submit!</button>
+						</div>
+					</div>
 				</form>
 			</div>
 		</div>
