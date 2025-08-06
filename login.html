@@ -75,7 +75,7 @@
 			<!-- create account -->
 			<div class="window fade-in-content winds_signup window-sethidden">
 				<h1>Account Creation</h1>
-				<form class="form-group row">
+				<form id="form_createacc" class="form-group row">
 					<div class="row">
 						<div class="col-md-4">
 							<label for="adminno" class="form-label">Admin Number</label>
@@ -91,7 +91,12 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-md-5">
+						<div class="col">
+							<label for="fullname" class="form-label">Full Name</label>
+							<input type="text" class="form-control" id="fullname" 
+							placeholder="Batman bin Suparman" required>
+						</div>
+						<div class="col-md-4">
 							<label for="school" class="form-label">School of</label>
 							<select id="school" class="form-control" required>
 								<option value="as">Applied Science</option>
@@ -102,7 +107,7 @@
 								<option value="it">Information Technology</option>
 							</select>
 						</div>
-						<div class="col">
+						<div class="col-md-3">
 							<label for="class" class="form-label">Class</label>
 							<input type="text" class="form-control" id="class" 
 								placeholder="IT-1234-4A" required>

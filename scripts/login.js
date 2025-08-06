@@ -56,12 +56,21 @@ function checkPasswordStrength() {
 	}
 }
 
+/*function loadCreateAccFormData(signInForm) {
+	const FULLNAME;
+	const 
+}*/
+
 function main() {
 	const NEWPASS = document.getElementById("newpassword");
 	const PASSRET = document.getElementById("passwordretype");
+	const CREATEACCFORM = document.getElementById("form_createacc");
 
 	NEWPASS.addEventListener("input", checkPasswordStrength);
 	PASSRET.addEventListener("input", checkRetypedPassword);
+	/*CREATEACCFORM.addEventListener("submit", function(event){
+		event.preventDefault(); loadCreateAccFormData(self);
+	});*/
 
 	openSignup();
 	setPageVisible();

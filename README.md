@@ -15,4 +15,5 @@
 ### Attendance
 - [ ] .
 ### Login/Sign up
-- [ ] .
+- [ ] store stuff to local storage and cookies
+- [ ] age and birthday validation
