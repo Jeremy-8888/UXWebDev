@@ -7,7 +7,8 @@ function openSignup() {
 }
 
 function setPageVisible() {
-	document.getElementById("maincontent").style.visibility = "visible";
+	document.getElementById("loadingscreen").style.display = "none";
+	document.getElementById("maincontent").style.display = "inline";
 }
 
 function main() {
