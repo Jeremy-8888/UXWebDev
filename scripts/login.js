@@ -1,8 +1,10 @@
 function openSignup() {
-	document.getElementById
 	if (new URL(window.location.href).searchParams.get("signup") !== null) {
 		let signupBtn = document.getElementById("loginbtn");
 		clickSelectWindow('winds_signup', signupBtn);
+		document.getElementById("navbar_signup").classList.add("active");
+	} else {
+		document.getElementById("navbar_login").classList.add("active");
 	}
 }
 
