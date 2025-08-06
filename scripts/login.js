@@ -56,6 +56,18 @@ function checkPasswordStrength() {
 	}
 }
 
+function checkBirthdayAge() {
+	const AGE = document.getElementById("age");
+	const BDAY = new Date(document.getElementById("bday").value);
+
+	AGE.setCustomValidity("");
+	
+	let yearsSince = Math.floor((new Date() - BDAY) / 31536000000); // 1y to ms
+
+	if (AGE.value != yearsSince)
+		AGE.setCustomValidity("Age does not match birthday.");
+}
+
 /*function loadCreateAccFormData(signInForm) {
 	const FULLNAME;
 	const 
@@ -64,10 +76,12 @@ function checkPasswordStrength() {
 function main() {
 	const NEWPASS = document.getElementById("newpassword");
 	const PASSRET = document.getElementById("passwordretype");
+	const AGEELEM = document.getElementById("age");
 	const CREATEACCFORM = document.getElementById("form_createacc");
 
 	NEWPASS.addEventListener("input", checkPasswordStrength);
 	PASSRET.addEventListener("input", checkRetypedPassword);
+	AGEELEM.addEventListener("input", checkBirthdayAge)
 	/*CREATEACCFORM.addEventListener("submit", function(event){
 		event.preventDefault(); loadCreateAccFormData(self);
 	});*/
