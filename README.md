@@ -7,8 +7,12 @@
 - [X] Add links to signup/login on jumbotron
 - [X] Autoscrolling articles
 - [X] Add text and images
-### Attendance
-- [ ] .
+### news
+- [ ] articles n shiet
+- [ ] (optional) commends under articles
 ### Login/Sign up
-- [ ] store stuff to local storage and cookies
+- [X] store stuff to local storage and cookies
 - [X] age and birthday validation
+### my account page
+- [ ] simply display the stuff on screen
+- [ ] (optional) make info editable

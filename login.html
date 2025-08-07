@@ -8,7 +8,7 @@
 	<script src="scripts/util.js"></script>
 	<script src="scripts/windows.js"></script>
 	<script src="scripts/backend-sim/account.js"></script>
-	<script src="scripts/backend-sim/loggedinuser.js"></script>
+	<script src="scripts/common.js"></script>
 	<script src="scripts/login.js"></script>
 </head>
 
@@ -23,9 +23,12 @@
 			<a class="navbar-brand" href="home.html">
 				<i class="fas fa-crosshairs me-2"></i>NYP Airsoft Club
 			</a>
-			<ul class="nav navbar-nav">
+			<ul id="loginnavbaritem" class="nav navbar-nav">
 				<li><a id="navbar_login" class="nav-link" href="login.html">Log In</a></li>
 				<li><a id="navbar_signup" class="nav-link" href="login.html?signup">Sign Up</a></li>
+			</ul>
+			<ul id="accountnavbaritem" class="nav navbar-nav" style="display: none;">
+				<li><a id="accountnavbarlink" class="nav-link" href="myaccount.html"></a></li>
 			</ul>
 			<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 				<li><a class="nav-link" href="home.html">Home</a>
@@ -58,7 +61,7 @@
 			<div class="window fade-in-content winds_login">
 				<h1>Welcome Back!</h1>
 				<h4>We're so excited to see you again!</h4>
-				<form>
+				<form id="form_login">
 					<br>
 					<label for="loginadminno" class="form-label">
 						Admin Number
@@ -89,7 +92,8 @@
 							<label for="email" class="form-label">NYP E-mail</label>
 							<input type="email" class="form-control" id="email" 
 							title="Use the school email address."
-							pattern="^.+@nyp\.edu\.sg$" required>
+							placeholder="abc@mymail.nyp.edu.sg"
+							pattern="^.+@mymail\.nyp\.edu\.sg$" required>
 						</div>
 					</div>
 					<div class="row">

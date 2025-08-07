@@ -1,7 +1,7 @@
 class Account {
 	constructor(email, adminno, name, school, classno, bday, year, password) {
 		this.email = email;
-		this.adminno = adminno;
+		this.adminno = adminno.toUpperCase();
 		this.name = name;
 		this.school = school;
 		this.classno = classno;
@@ -38,13 +38,33 @@ class Account {
 	}
 	
 	static retrieveAccount(adminno) {
-		return new Account.deserialize(localStorage.getItem(adminno));
+		return Account.deserialize(localStorage.getItem(adminno.toUpperCase()));
 	}
 
 	static deleteAccountEntry(adminno) {
-		localStorage.removeItem(adminno);
+		localStorage.removeItem(adminno.toUpperCase());
+	}
+
+	static isAccountExist(adminno) {
+		return localStorage.getItem(adminno.toUpperCase()) !== null;
+	}
+
+	static isCorrectPassword(adminno, password) {
+		if (!Account.isAccountExist(adminno.toUpperCase())) return false;
+
+		let accInfo = Account.retrieveAccount(adminno.toUpperCase());
+		return accInfo.password === password;
 	}
 }
 
+function setLoggedInUser(fullname) {
+	localStorage.setItem("LOGGEDINAS", fullname);
+}
 
+function getNameOfLoggedInUser() {
+	return localStorage.getItem("LOGGEDINAS");
+}
 
+function logoutCurrentUser() {
+	localStorage.removeItem("LOGGEDINAS");
+}
