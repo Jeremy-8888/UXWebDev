@@ -4,7 +4,9 @@
 <head>
 	<title id="pageTitle"></title>
 	<link rel="stylesheet" type="text/css" href="styles/common.css">
+	<link rel="stylesheet" type="text/css" href="styles/myprofile.css">
 	<script src="scripts/backend-sim/account.js"></script>
+	<script src="scripts/validateaccountform.js"></script>
 	<script src="scripts/common.js"></script>
 	<script src="scripts/myprofile.js"></script>
 </head>
@@ -40,6 +42,96 @@
 			</ul>
 		</div>
 	</nav>
+	<main id="maincontent">
+		<div id="section-accountactions" class="windowcollection">
+			<!-- create account -->
+			<div class="window fade-in-content winds_signup">
+				<h1>My Info</h1>
+				<form id="form_createacc" class="form-group row">
+					<div class="row">
+						<div class="col-md-4">
+							<label for="adminno" class="form-label">Admin Number</label>
+							<input type="text" class="form-control" id="adminno" title="(6 Numbers + Letter)"
+								placeholder="123456A" pattern="^[0-9]{6}[A-Za-z]$" required>
+						</div>
+						<div class="col">
+							<label for="email" class="form-label">NYP E-mail</label>
+							<input type="email" class="form-control" id="email" title="Use the school email address."
+								placeholder="abc@mymail.nyp.edu.sg" pattern="^.+@mymail\.nyp\.edu\.sg$" required>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col">
+							<label for="fullname" class="form-label">Full Name</label>
+							<input type="text" class="form-control" id="fullname" placeholder="Batman bin Suparman"
+								required>
+						</div>
+						<div class="col-md-4">
+							<label for="school" class="form-label">School of</label>
+							<select id="school" class="form-control" required>
+								<option value="as">Applied Science</option>
+								<option value="bm">Business Management</option>
+								<option value="dm">Design & Media</option>
+								<option value="en">Engineering</option>
+								<option value="hs">Health & Social Sciences</option>
+								<option value="it">Information Technology</option>
+							</select>
+						</div>
+						<div class="col-md-3">
+							<label for="class" class="form-label">Class</label>
+							<input type="text" class="form-control" id="class" placeholder="IT-1234-4A" required>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<label for="bday" class="form-label">Birthdate</label>
+							<input type="date" class="form-control" id="bday" required>
+						</div>
+						<div class="col">
+							<label for="age" class="form-label">Age</label>
+							<input type="number" class="form-control" id="age" min="16" max="100" value="16" required>
+						</div>
+						<div class="col">
+							<label for="year" class="form-label">Year</label>
+							<input type="number" class="form-control" id="year" min="1" max="3" value="1" required>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col">
+							<label for="newpassword" class="form-label">Password</label>
+							<input type="password" class="form-control" id="newpassword"
+								placeholder="Choose a strong password!" required>
+						</div>
+						<div class="col">
+							<label for="passwordretype" class="form-label">Retype Password</label>
+							<input type="password" class="form-control" id="passwordretype" required>
+						</div>
+					</div>
+					<hr style="visibility: hidden;">
+					<div class="row">
+						<div class="col">
+							<button type="submit" id="deleteaccount"
+							  class="btn btn-outline-danger float-start">
+								Delete Account
+							</button> 
+							<!--when something is edited, `btn-outline` should
+							change to `btn-primary` and the disabled flag removed-->
+							<button type="submit" id="submitedits" style="margin-left: 5px;"
+							  class="btn btn-outline float-end" disabled>
+								Save Edited Info!
+							</button>
+							<button onclick="logoutCurrentUser();
+							 	alert('You have been logged out.');
+								window.location.href = 'home.html';"
+							  class="btn btn-warning float-end">
+								Logout
+							</button> 
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</main>
 	<!-- Footer -->
 	<footer class="bg-dark text-white pt-5 pb-4">
 		<div class="container">
