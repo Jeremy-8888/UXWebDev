@@ -1,3 +1,6 @@
+// requires scripts/backend-sim/account.js
+// requires scripts/backend-sim/loggedinuser.js
+
 function openSignup() {
 	if (new URL(window.location.href).searchParams.get("signup") !== null) {
 		let signupBtn = document.getElementById("loginbtn");
@@ -68,10 +71,24 @@ function checkBirthdayAge() {
 		AGE.setCustomValidity("Age does not match birthday.");
 }
 
-/*function loadCreateAccFormData(signInForm) {
-	const FULLNAME;
-	const 
-}*/
+function loadCreateAccFormData(signInForm) {
+	const EMAIL    = document.getElementById("email").value;
+	const ADMINNO  = document.getElementById("adminno").value;
+	const FULLNAME = document.getElementById("fullname").value;
+	const SCHOOL   = document.getElementById("school").value;
+	const CLASS    = document.getElementById("class").value;
+	const BDAY     = document.getElementById("bday").value;
+	const YEAR     = document.getElementById("year").value;
+	const PWD      = document.getElementById("newpassword").value;
+
+	let accEntry = new Account(
+		EMAIL, ADMINNO, FULLNAME, SCHOOL, CLASS, BDAY, YEAR, PWD
+	);
+
+	accEntry.setAccountEntry();
+	alert("Account sucessfully created!\nPress 'ok' to redirect to account page...");
+	window.location.href("myprofile.html");
+}
 
 function main() {
 	const NEWPASS = document.getElementById("newpassword");

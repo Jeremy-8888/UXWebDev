@@ -1,16 +1,21 @@
 class Account {
-	constructor(adminno, email, name, school, classno, bday, password) {
-		this.adminno = adminno;
+	constructor(email, adminno, name, school, classno, bday, year, password) {
 		this.email = email;
+		this.adminno = adminno;
 		this.name = name;
 		this.school = school;
 		this.classno = classno;
 		this.bday = bday;
+		this.year = year;
 		this.password = password;
 	}
 
 	serialize() {
 		return JSON.stringify(this);
+	}
+
+	setAccountEntry() {
+		localStorage.setItem(this.adminno, this.serialize());
 	}
 
 	static deserialize(jsonString) {
@@ -21,33 +26,25 @@ class Account {
 		
 		const DATA = JSON.parse(jsonString);
 		return new Account(
-			DATA.adminno,
 			DATA.email,
+			DATA.adminno,
 			DATA.name,
 			DATA.school,
 			DATA.classno,
 			DATA.bday,
+			DATA.year,
 			DATA.password
 		)
 	}
-}
-
-function retrieveAccount(adminno) {
-	return new Account.deserialize(localStorage.retrieveAccount(adminno));
-}
-
-function setAccountEntry(adminno, account) {
-	if (!account instanceof Account) {
-		console.error("Argument`account` should be an `Account` instance!");
-		return;
+	
+	static retrieveAccount(adminno) {
+		return new Account.deserialize(localStorage.getItem(adminno));
 	}
 
-	localStorage.setItem(
-		adminno,
-		account.serialize()
-	)
+	static deleteAccountEntry(adminno) {
+		localStorage.removeItem(adminno);
+	}
 }
 
-function deleteAccountEntry(adminno) {
-	localStorage.removeItem(adminno);
-}
+
+
