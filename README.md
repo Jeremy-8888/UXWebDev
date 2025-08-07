@@ -1,7 +1,7 @@
 ## TODO
 ### Homepage
-- [ ] (optional)Separate non-window specific JS stuff->pages can share scripts
-- [ ] (optional)Rewrite CCA info buttons to use radios
+- [X] (optional)Separate non-window specific JS stuff->pages can share scripts
+- [ ] (low prio optional)Rewrite CCA info buttons to use radios
 - [ ] (higher prio optional)Flippable cards to show more information
 - [X] Improve window hiding
 - [X] Add jump to sections on jumbotron
