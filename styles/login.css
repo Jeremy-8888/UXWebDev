@@ -1,0 +1,19 @@
+#loadingscreen {
+	width: 8%;
+	height: 8%;
+	display: block;
+	margin: auto;
+	margin-top: 30vh;
+	margin-bottom: 30vh;
+}
+
+#windbtns_buttons {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.window:not(#wind_buttons) {
+	max-width: 60vw;
+	width: 60vw;
+}

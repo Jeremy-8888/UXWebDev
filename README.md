@@ -1,8 +1,3 @@
-# UXWebDev
-# hello test test
-# MTC MTC MTC MTC
-
-
 ## TODO
 ### Homepage
 - [ ] (optional)Separate non-window specific JS stuff->pages can share scripts
@@ -15,4 +10,5 @@
 ### Attendance
 - [ ] .
 ### Login/Sign up
-- [ ] .
+- [ ] store stuff to local storage and cookies
+- [X] age and birthday validation

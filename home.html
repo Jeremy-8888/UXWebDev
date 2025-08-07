@@ -4,7 +4,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>NYP Airsoft Club - Home</title>
-	<link rel="stylesheet" type="text/css" href="CSSExternal.css">
+	<link rel="stylesheet" type="text/css" href="styles/CSSExternal.css">
+	<script src="scripts/util.js"></script>
+	<script src="scripts/windows.js"></script>
+	<script src="scripts/slides.js"></script>
 	<script src="scripts/home.js"></script>
 </head>
 
@@ -19,6 +22,10 @@
 			<a class="navbar-brand" href="home.html">
 				<i class="fas fa-crosshairs me-2"></i>NYP Airsoft Club
 			</a>
+			<ul class="nav navbar-nav">
+				<li><a class="nav-link" href="login.html">Log In</a></li>
+				<li><a class="nav-link" href="login.html?signup">Sign Up</a></li>
+			</ul>
 			<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 				<li><a class="nav-link active" href="home.html">Home</a>
 				</li>
@@ -38,40 +45,42 @@
 			<h2 id="jumbotext-foot">Welcome Home<p>
 		</div>
 		<div class="jumbolinks">
-			<a href="about.html">Actively recruiting! Join now!</a>
-			<a href="signin.html">Member? Log in!</a>
+			<a href="login.html?signup">Actively recruiting! Join now!</a>
+			<a href="login.html">Member? Log in!</a>
 		</div>
 		<div class="jumbojumpto">
 			<a href="#section-ccainfo">CCA Info</a>
 			<a href="#section-article">Latest Updates</a>
 		</div>
 	</header>
-	<br>
 	<main id="maincontent">
 		<div id="section-ccainfo" class="windowcollection">	
-			<div class="window wind_buttons">
-				<ul class="buttonselection">
-					<li><button onclick="showCorrectWindows('winds_aboutcca')">About CCA</button></li>
-					<li><button onclick="showCorrectWindows('winds_keymembs')">Key Members</button></li>
-					<li><button onclick="showCorrectWindows('winds_instruct')">Instructors</button></li>
-					<li><button onclick="showCorrectWindows('winds_soclmeds')">Social Media</button></li>
-				</ul>
+			<!--Buttons list-->
+			<div id="wind_buttons" class="window">
+				<div id="windbtns_buttons" class="buttonselection">
+					<button class="btn_windows active" onclick="clickSelectWindow('winds_aboutcca', this)">About CCA</button></br>
+					<button class="btn_windows" onclick="clickSelectWindow('winds_keymembs', this)">Key Members</button></br>
+					<button class="btn_windows" onclick="clickSelectWindow('winds_instruct', this)">Instructors</button></br>
+					<button class="btn_windows" onclick="clickSelectWindow('winds_soclmeds', this)">Social Media</button>
+				</div>
 			</div>
 			<!--About CCA-->
-			<div class="window winds_aboutcca">
+			
+			<div class="window fade-in-content winds_aboutcca">
 				<h1>About CCA</h1>
 				<ul>
 					<li>
-						NYP offers the first ever Player versus Player (PvP) airsoft 
-						CCA in Singapore. It is a ONE OF A KIND experience as it is not
-						available in other polytechnics, and <strong>at no charge too!</strong>
+						NYP offers the first ever Player versus Player (PvP) 
+						airsoft CCA in Singapore. It is a ONE OF A KIND experience 
+						as it is not available in other polytechnics, and 
+						<strong>at no charge too!</strong>
 					</li>
 					<br>
 					<li>
 						Airsoft promotes tactical CQB skills as well as teamwork
 						and honesty for everyone else as you navigate through
-						the arena, eliminating your opponents with speed, surprise 
-						and violence of action.
+						the arena, eliminating your opponents with speed,
+						surprise and violence of action.
 					</li>
 					<br>
 					<li>
@@ -85,17 +94,17 @@
 					</li>
 				</ul>
 			</div>
-			<div class="window winds_aboutcca" >
+			<div class="window fade-in-content winds_aboutcca" >
 				<h1>Regarding Airsoft</h1>
 				<p>
 					Airsoft, also known as survival game (Japanese: サバイバルゲーム, 
 					romanized: sabaibaru gēmu) in Japan where it was popular, 
 					is a team-based shooting game in which participants eliminate 
 					opposing players out of play by shooting them with spherical
-					 plastic projectiles shot from airsoft guns.
+					plastic projectiles shot from airsoft guns.
 				</p>
 				<p>
-					Although similar to paintball in concept and gameplay, 
+					Although similar to paintball in concept and gameplay,
 					airsoft pellets do not leave visible markings on their 
 					target and hits are not always apparent. Though the pellet 
 					impacts can leave small bruises or welts on exposed skin 
@@ -106,26 +115,26 @@
 				</p>
 			</div>
 			<!--Club committee-->
-			<div class="window winds_keymembs window-sethidden">
+			<div class="window window-sethidden fade-in-content winds_keymembs">
 				<h1>NYP Airsoft CEO</h1>
 				<img src="media/goofy.jpg">
 			</div>
-			<div class="window winds_keymembs window-sethidden">
-				<h1>Chairman 2025</h1>
+			<div class="window window-sethidden fade-in-content winds_keymembs">
+				<h1>President</h1>
 				<img src="media/robba.jpg">
 			</div>
-			<div class="window winds_keymembs window-sethidden">
-				<h1>The Comittee :)/</h1>
+			<div class="window window-sethidden fade-in-content winds_keymembs">
+				<h1>The Comittee</h1>
 				<img src="media/da_comittee.jpg">
 			</div>
 			<!--Instructors-->
-			<div class="window winds_instruct window-sethidden">
-				<h1>Instructor</h1>
+			<div class="window window-sethidden fade-in-content winds_instruct">
+				<h1>External Instructor</h1>
 				<img src="media/oldmanjenkins.png">
-				<h3 style="text-align: center;">Senior Jenkins</h2>
+				<h3 style="text-align: center;">Mr. Oman Jenkins</h2>
 			</div>
 			<!--Social Media-->
-			<div class="window winds_soclmeds window-sethidden">
+			<div class="window window-sethidden fade-in-content winds_soclmeds">
 				<h1>Social Media</h1>
 				<a href="#" class="custombuttonlink" style="color: darkred;">
 					<img src="media/youtubelogo.png">
@@ -140,13 +149,15 @@
 					<span>Facebook</span>
 				</a>
 			</div>
-			<div class="window winds_soclmeds window-sethidden">
+			<div class="window window-sethidden fade-in-content winds_soclmeds">
 				<h1>Our Contacts</h1>
 				<br>
 				<ul style="list-style: none; margin:0px; padding:0px;">
 					<li>Email
 						<ul><li>
-							<a href="mailto: NYPAirsoft@mymail.nyp.edu.sg">NYPAirsoft@mymail.nyp.edu.sg</a>
+							<a href="mailto: NYPAirsoft@mymail.nyp.edu.sg">
+								NYPAirsoft@mymail.nyp.edu.sg
+							</a>
 						</li></ul>
 					</li>
 					<li>Phone
@@ -164,15 +175,16 @@
 		</div>
 		<br>
 		<hr>
-		<br>
 		<div id="section-article" class="jumbotext" style="text-shadow: none; background-color: transparent;">
 			<h1 class="jumbotext-title">Latest News and Updates</h1>
-			<h2 id="jumbotext-foot" style="font-weight: normal;">Read all of them to stay updated!<h2>
+			<h2 id="jumbotext-foot" style="font-weight: normal;">
+				Read all of them to stay updated!
+			<h2>
 		</div>
 		<br>
-		<div class="slideshowcollection">
+		<div class="slideshowcollection" id="slidcol_news">
 			<button class="slidebutton" id="slidebutton-back">&lt</button>
-			<div class="slideshow-item slide-visible" id="slide-obj1">
+			<div class="slideshow-item slide-visible">
 				<img src="media/registrationopen.png" alt="Banner for NYP Airsoft Open Registration 2025">
 				<div class="slideshow-item-text">
 					<h2>Now Accepting New Recruits!</h2>
@@ -185,7 +197,7 @@
 						in the NYP portal.<br><br>
 
 						Once you have been accepted, create an account 
-						<a href="about.html">here</a> so we can record your 
+						<a href="about.html?signup">here</a> so we can record your 
 						attendance for future events.<br><br>
 
 						Anyone is welcome, whether you are a freshman or you have
@@ -193,8 +205,8 @@
 					</article>
 				</div>
 			</div>
-			<div class="slideshow-item" id="slide-obj2">
-				<video autoplay controls>
+			<div class="slideshow-item">
+				<video controls>
 					<source src="media/nofullauto.mp4" type="video/mp4">
 					A airsoft video in which a participant is accused of using 
 					a full auto mode on his airsoft rifle inside of a building,
@@ -218,7 +230,7 @@
 					</article>
 				</div>
 			</div>
-			<div class="slideshow-item" id="slide-obj3">
+			<div class="slideshow-item">
 				<img src="https://media1.tenor.com/m/CWHP07lbmk0AAAAd/tactics-cqb.gif" alt="CQB tactics demonstration">
 				<div class="slideshow-item-text">
 					<h2>CQB Tips and Tricks</h2>
@@ -306,7 +318,7 @@
     </footer>
 	<!-- Bootstrap 5 JS Bundle with Popper -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="Mainjavascript.js"></script>
+	<script src="scripts/Mainjavascript.js"></script>
 
 </body>
 
