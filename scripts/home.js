@@ -2,6 +2,13 @@
 
 var slideAutoScroll;
 
+function loggedInGreeter() {
+	let username = getNameOfLoggedInUser()
+	if (username !== null)
+		document.getElementById("jumbotext-foot").textContent = 
+			"Welcome back, " + username;
+}
+
 function main() {
 	slideAutoScroll = window.setInterval(function() {
 		iterateSlide(true, "slidcol_news");
@@ -19,4 +26,6 @@ function main() {
 			window.clearInterval(slideAutoScroll);
 		}
 	);
+
+	loggedInGreeter();
 } window.addEventListener("load", main);
