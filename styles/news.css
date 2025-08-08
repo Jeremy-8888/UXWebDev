@@ -3,6 +3,7 @@
 	display: flex;
 	margin-left: 10vw;
 	margin-right: 10vw;
+	margin-bottom: 50px;
 	justify-content: center; 
 	box-shadow: 0px 10px 50px 5px #88888854;
 	animation: fadeInFromTop 1.2s ease-out;
