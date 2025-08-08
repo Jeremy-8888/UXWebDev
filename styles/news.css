@@ -1,0 +1,55 @@
+.announcementsbox {
+	border-style:ridge;
+	display: flex;
+	margin-left: 10vw;
+	margin-right: 10vw;
+	justify-content: center; 
+	box-shadow: 0px 10px 50px 5px #88888854;
+	animation: fadeInFromTop 1.2s ease-out;
+	max-height: 90vh;
+	overflow-y: auto;
+}
+
+.announcementsbox>.highlight {
+	margin: 40px;
+	width: 110%;
+	overflow-wrap:break-word;
+}
+
+.announcementsbox>.highlight>figure>img {
+	width: 100%;
+}
+
+.announcementsbox>.highlight>header>h2 {
+	font-size: xx-large;
+	letter-spacing: 0.1rem;
+}
+
+.announcementsbox>.highlight>article {
+	font-size: 13pt;
+}
+
+.announcementsbox>aside {
+	border-style:groove; /* TEMPORARY REMOVE LATER */
+	box-shadow: inset 0px 3px 15px 2px #88888854;
+	overflow-y: auto;
+}
+
+.announcementsbox>aside header {
+	text-align: center;
+	margin-top: 8px;
+}
+
+.announcementsbox>aside figure {
+	text-align: center;
+}
+
+.announcementsbox>aside figure>img {
+	max-width: 100%;
+}
+
+.announcementsbox>aside article {
+	margin: 10px;
+	overflow-y: auto;
+	line-height: 1.7;
+}
