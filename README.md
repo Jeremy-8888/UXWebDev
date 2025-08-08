@@ -15,5 +15,5 @@
 - [X] store stuff to local storage and cookies
 - [X] age and birthday validation
 ### my account page
-- [ ] simply display the stuff on screen
-- [ ] (optional) make info editable
+- [X] simply display the stuff on screen
+- [ ] make info editable

@@ -57,12 +57,24 @@ class Account {
 	}
 }
 
-function setLoggedInUser(fullname) {
-	localStorage.setItem("LOGGEDINAS", fullname);
+function setLoggedInUser(fullname, adminno) {
+	let currentUser = [fullname, adminno.toUpperCase()]
+
+	localStorage.setItem("LOGGEDINAS", JSON.stringify(currentUser));
 }
 
 function getNameOfLoggedInUser() {
-	return localStorage.getItem("LOGGEDINAS");
+	let currentUser = localStorage.getItem("LOGGEDINAS");
+	if (currentUser === null) return null;
+
+	return JSON.parse(currentUser)[0];
+}
+
+function getUIDOfLoggedInUser() {
+	let currentUser = localStorage.getItem("LOGGEDINAS");
+	if (currentUser === null) return null;
+
+	return JSON.parse(currentUser)[1];
 }
 
 function logoutCurrentUser() {

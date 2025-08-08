@@ -1,8 +1,25 @@
+// requires scripts/backend-sim/account.js
+
+function displayUserData() {
+	let UID = getUIDOfLoggedInUser();
+	let accData = Account.retrieveAccount(UID);
+
+	document.getElementById("email").value    = accData.email;
+	document.getElementById("adminno").value  = accData.adminno;
+	document.getElementById("fullname").value = accData.name;
+	document.getElementById("school").value   = accData.school;
+	document.getElementById("class").value    = accData.classno;
+	document.getElementById("bday").value     = accData.bday;
+	document.getElementById("year").value     = accData.year;
+}
+
 
 
 function main() {
 	let username = getNameOfLoggedInUser()
-	if (username !== null) { 
+	if (username !== null) {
+		displayUserData(); // display user data first before we show the page
+		
 		// unhide the page
 		document.getElementById("docbody").setAttribute("style", '');
 

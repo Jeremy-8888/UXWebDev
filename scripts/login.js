@@ -36,7 +36,7 @@ function loadCreateAccFormData(signInForm) {
 	);
 
 	accEntry.setAccountEntry();
-	setLoggedInUser(FULLNAME);
+	setLoggedInUser(FULLNAME, ADMINNO);
 	console.log(document.cookie);
 	alert("Account sucessfully created!\nPress 'OK' to redirect to account page...");
 	window.location.href = "myprofile.html";
@@ -48,7 +48,7 @@ function loginUser() {
 
 	if (Account.isCorrectPassword(ADMINNO, PASSWRD)) {
 		let username = Account.retrieveAccount(ADMINNO).name;
-		setLoggedInUser(username);
+		setLoggedInUser(username, ADMINNO);
 		alert("Succesfully logged in as " + username);
 		window.location.reload();
 	} else {
