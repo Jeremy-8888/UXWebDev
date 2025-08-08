@@ -6,7 +6,7 @@
 	justify-content: center; 
 	box-shadow: 0px 10px 50px 5px #88888854;
 	animation: fadeInFromTop 1.2s ease-out;
-	max-height: 90vh;
+	max-height: 100vh;
 	overflow-y: auto;
 }
 
@@ -42,6 +42,7 @@
 
 .announcementsbox>aside figure {
 	text-align: center;
+	font-weight: bolder;
 }
 
 .announcementsbox>aside figure>img {
@@ -50,6 +51,7 @@
 
 .announcementsbox>aside article {
 	margin: 10px;
+	font-weight: bold;
 	overflow-y: auto;
 	line-height: 1.7;
 }
