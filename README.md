@@ -8,7 +8,9 @@
 - [X] Add links to signup/login on jumbotron
 - [X] Autoscrolling articles
 - [X] Add text and images
-### news
+### newspage
+- [ ] add animations
+### articles
 - [ ] articles n shiet
 - [ ] (optional) comments under articles
 ### Login/Sign up

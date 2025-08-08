@@ -193,6 +193,14 @@
 	margin: 0;
 }
 
+.slideshow-item-text {
+	max-width: 600px;
+}
+
+.slideshow-item-text>article>a {
+	color: yellowgreen;
+}
+
 .slideshowcollection .slidebutton {
 	background-color: #00000000;
 	box-shadow: inset 0px 10px 10px 5px #88888854;
@@ -207,14 +215,6 @@
 	transform: translateY(-50%);
 	top: 50%;
 	z-index: 255;
-}
-
-.slideshow-item-text {
-	max-width: 600px;
-}
-
-.slideshow-item-text>article>a {
-	color: yellowgreen;
 }
 
 .slideshowcollection .slidebutton:hover {

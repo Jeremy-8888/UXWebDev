@@ -20,6 +20,9 @@
 
 .announcementsbox>.highlight>figure>img {
 	width: 100%;
+	border: 1px solid #ddd;
+ 	border-radius: 4px;
+	padding: 5px;
 }
 
 .announcementsbox>.highlight>header>h2 {
@@ -48,7 +51,9 @@
 }
 
 .announcementsbox>aside figure>img {
-	max-width: 100%;
+	object-fit: cover;
+	height: 225px;
+	width: 100%;
 }
 
 .announcementsbox>aside article {
@@ -66,23 +71,27 @@
 	text-align: center;
 	justify-content: center; 
 	display: flex; 
-}
-
-.articleitem>header>h2{
-	display: block;
-}
-
-.articleitem>header>img {
-	display: block;
-	height: 180px;
-	width: 275px;
+	flex-direction: column;
+	align-items: center;
 }
 
 .articleslist>.articleitem {
 	border-style: dashed; /* TEMPORARY DELETE LATER */
-	align-items: center;
 	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 80vw;
+	height: 230px;
 }
+
+.articleitem>img {
+	width: 255px;
+	height: 160px;
+	border: 1px solid #ddd;
+ 	border-radius: 4px;
+	padding: 5px;
+}
+
 
 .articleitem>article {
 	text-align: left;
