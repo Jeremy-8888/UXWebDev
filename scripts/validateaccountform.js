@@ -1,6 +1,8 @@
-function checkRetypedPassword() {
+function checkRetypedPassword(ignoreEmpty = false) {
 	const NEWPASSVAL = document.getElementById("newpassword").value;
 	const PASSRET = document.getElementById("passwordretype");
+
+	if (ignoreEmpty && NEWPASSVAL == '' && PASSRET == '') return;
 
 	PASSRET.setCustomValidity("");
 
@@ -9,9 +11,11 @@ function checkRetypedPassword() {
 	}
 }
 
-function checkPasswordStrength() {
+function checkPasswordStrength(ignoreEmpty = false) {
 	const NEWPASS = document.getElementById("newpassword");
 	const NEWPASSVAL = NEWPASS.value;
+
+	if (ignoreEmpty && NEWPASSVAL == '') return;
 
 	NEWPASS.setCustomValidity("");
 	
@@ -60,5 +64,6 @@ function main() {
 
 	NEWPASS.addEventListener("input", checkPasswordStrength);
 	PASSRET.addEventListener("input", checkRetypedPassword);
-	AGEELEM.addEventListener("input", checkBirthdayAge)
+	if (AGEELEM !== null)
+		AGEELEM.addEventListener("input", checkBirthdayAge)
 } window.addEventListener("load", main);

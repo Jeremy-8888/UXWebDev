@@ -16,4 +16,4 @@
 - [X] age and birthday validation
 ### my account page
 - [X] simply display the stuff on screen
-- [ ] make info editable
+- [X] make info editable

@@ -49,7 +49,7 @@ function loginUser() {
 	if (Account.isCorrectPassword(ADMINNO, PASSWRD)) {
 		let username = Account.retrieveAccount(ADMINNO).name;
 		setLoggedInUser(username, ADMINNO);
-		alert("Succesfully logged in as " + username);
+		alert("Sucessfully logged in as " + username);
 		window.location.reload();
 	} else {
 		alert("Either account does not exist or you used a wrong password!");
