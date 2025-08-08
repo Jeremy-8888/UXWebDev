@@ -9,7 +9,8 @@
 - [X] Autoscrolling articles
 - [X] Add text and images
 ### newspage
-- [ ] add animations
+- [X] add animations
+- [X] link articles to their articles . . . 
 ### articles
 - [ ] articles n shiet
 - [ ] (optional) comments under articles
