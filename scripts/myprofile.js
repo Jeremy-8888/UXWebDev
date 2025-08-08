@@ -13,7 +13,10 @@ function displayUserData() {
 	document.getElementById("year").value     = accData.year;
 }
 
-
+function formEditedEnableChangeInfoButton() {
+	let submitbtn = document.getElementById("submitedits");
+	submitbtn.disabled = false;
+}
 
 function main() {
 	let username = getNameOfLoggedInUser()
@@ -23,7 +26,12 @@ function main() {
 		// unhide the page
 		document.getElementById("docbody").setAttribute("style", '');
 
+		// set custom page title
 		document.getElementById("pageTitle").textContent = username + "'s account"
+
+		// detect if form edited, then set save button to active
+		let form = document.getElementById("form_editacc");
+		form.addEventListener("input", formEditedEnableChangeInfoButton);
 		
 	} else { // handle non logged ins by kicking them straight back to homepage
 		alert("You are forbidden to access this page.")
