@@ -1,3 +1,6 @@
+// requires ../scripts/backend-sim/account.js
+// requires ../scripts/backend-sim/comments.js
+
 function getAccesibilityCfg() {
 	let accesibilityCfg = localStorage.getItem("acessibilityCfg");
 	if (accesibilityCfg === null) return null;
@@ -55,7 +58,38 @@ function preloadDarkTheme() { // prevent blinding user on load with FOUC when us
 }
 preloadDarkTheme();
 
+function renderComments() {
+	if (getNameOfLoggedInUser() !== null) {
+		document.getElementById("userreply").style.display = "inline";
+	}
+
+	let storedComments = getComments();
+	if (storedComments.length === 0) return;
+	
+	let commentsList = document.getElementById("commentlist");
+	for (let i = 0; i < storedComments.length; i++) {
+		let commentInfo = storedComments[i];
+
+		let currentUser = commentInfo[0];
+		let time        = commentInfo[1];
+		let comment     = commentInfo[2].replace(/\n/g, '<br>');
+
+		let commentReply = document.createElement('div');
+		commentReply.classList.add("commentreply");
+		commentReply.innerHTML = 
+		`<div class="commentidentity">
+			<h5>${currentUser}</h5>
+			<h6>${time}</h6>
+		</div>
+		<p>${comment}</p>`
+		commentsList.prepend(commentReply);
+	}
+
+}
+
 function main() {
+	renderComments();
+
 	document.getElementById("selectsmall").addEventListener(
 		"change", function() {setArticleFontSize("small");}
 	);
@@ -68,6 +102,14 @@ function main() {
 
 	document.getElementById("selectdark").addEventListener("change", setDarkMode);
 	document.getElementById("selectlight").addEventListener("change", setLightMode);
+
+	document.getElementById("userreply").addEventListener(
+		"submit", function(event) {	
+			event.preventDefault(); 
+			addComment();
+			window.location.reload();
+		}
+	);
 
 	loadAccesibilityCfg();
 } window.addEventListener("load", main);
