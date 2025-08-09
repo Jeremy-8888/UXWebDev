@@ -1,6 +1,6 @@
 main {
 	font-size: medium;
-	margin-bottom: 100px;
+	margin-bottom: 30px;
 }
 
 .pagecontainer {
@@ -95,4 +95,34 @@ main {
 
 .pagecontainer>main>article>section>figure>figcaption {
 	text-align: center;
+}
+
+.commentsection {
+	display: flex;
+	flex-direction: column;
+	margin-left: 12vw;
+	margin-right: 12vw;
+	margin-bottom: 30px;
+}
+
+.commentsection>.comments {
+	display: flex;
+	flex-direction: column;
+	margin-left: 2vw;
+	margin-right: 2vw;
+}
+
+.commentsection>.comments>#commentlist>.commentreply {
+	border-top: 1px solid lightgrey;
+	padding-top: 8px;
+}
+
+.commentsection>.comments>#commentlist>.commentreply>.commentidentity {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.commentsection>.comments>#commentlist>.commentreply>.commentidentity>h6 {
+	color: grey;
 }

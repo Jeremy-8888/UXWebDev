@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="../styles/articles.css">
 	<script src="../scripts/backend-sim/account.js"></script>
 	<script src="../scripts/common.js"></script>
+	<script src="../scripts/backend-sim/comments.js"></script>
 	<script src="../scripts/articles.js"></script>
 </head>
 
@@ -257,8 +258,46 @@
 					</label>
 				</fieldset>
 			</div>
-
 		</aside>
+	</div>
+	<hr>
+	<div class="commentsection">
+		<header>
+			<h2>Comments</h2>
+		</header>
+		<div class="comments">
+			<form id="userreply" style="display: none;">
+				<div class="mb-3">
+					<label for="message" class="form-label">
+						<i class="fas fa-envelope me-2"></i>Write us your thoughts...
+					</label>
+					<textarea class="form-control" id="usercomment"
+					  rows="3" placeholder="Your comments are public." required></textarea>
+					<button type="submit" class="btn btn-primary">Add reply</button>
+				</div>
+			</form>
+			<div id="commentlist">
+				<div class="commentreply">
+					<div class="commentidentity">
+						<h5>James Lim</h5>
+						<h6>2025-2-5 9:49:8</h6>
+					</div>
+					<p>
+						Wow...fascinating
+					</p>
+				</div>
+				<div class="commentreply">
+					<div class="commentidentity">
+						<h5>Arwin Shanmugam</h5>
+						<h6>2024-11-29 11:24:22</h6>
+					</div>
+					<p>
+						This is so cool!!! I wanna join NYP Airsoft too!
+					</p>
+				</div>
+			</div>
+		</div>
+
 	</div>
 	<!-- Footer -->
 	<footer class="bg-dark text-white pt-5 pb-4">

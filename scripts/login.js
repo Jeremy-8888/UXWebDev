@@ -37,7 +37,6 @@ function loadCreateAccFormData(signInForm) {
 
 	accEntry.setAccountEntry();
 	setLoggedInUser(FULLNAME, ADMINNO);
-	console.log(document.cookie);
 	alert("Account sucessfully created!\nPress 'OK' to redirect to account page...");
 	window.location.href = "myprofile.html";
 }
