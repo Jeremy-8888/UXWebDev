@@ -301,6 +301,8 @@ footer a:hover {
 		font-size: 1rem;
 	}
 }
+
+
 /* Cards */
 .card {
 	border: none;
@@ -376,43 +378,58 @@ footer a:hover {
 
 /* FAQ Styles */
 .faq-item {
-	border-bottom: 1px solid #e9ecef;
-	margin-bottom: 0.5rem;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
 }
 
 .faq-question {
-	padding: 1rem;
-	background-color: #f8f9fa;
-	cursor: pointer;
-	border-radius: 8px;
-	transition: background-color 0.3s ease;
-	font-weight: 500;
-	user-select: none;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #e9ecef;
 }
 
 .faq-question:hover {
-	background-color: #e9ecef;
+    background-color: #e9ecef;
+}
+
+.faq-question.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.faq-question h5 {
+    margin: 0;
+    font-size: 1.1rem;
 }
 
 .faq-question i {
-	transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .faq-question.active i {
-	transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
 .faq-answer {
-	max-height: 0;
-	overflow: hidden;
-	transition: max-height 0.4s ease, padding 0.4s ease;
-	background-color: white;
-	border-radius: 0 0 8px 8px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    background-color: white;
 }
 
 .faq-answer.show {
-	max-height: 200px;
-	padding: 1rem;
+    max-height: 200px;
+    padding: 1rem;
+}
+
+.faq-answer p {
+    margin: 0;
+    color: #495057;
+    line-height: 1.6;
 }
 
 /* Social Media Icons Styles */
@@ -479,3 +496,47 @@ footer a:hover {
     color: #6c757d !important;
     transition: color 0.3s ease;
 }
+
+/* Partners Links Styles */
+.partners-links {
+    margin-top: 1rem;
+}
+
+.partners-links h6 {
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.partners-links a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.partners-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #ffffff !important;
+}
+
+/* Responsive adjustments for partners */
+@media (max-width: 768px) {
+    .partners-links .d-flex {
+        flex-direction: column;
+        gap: 0.5rem !important;
+    }
+    
+    .partners-links a {
+        text-align: center;
+        margin-right: 0 !important;
+    }
+}
+
