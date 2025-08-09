@@ -3,9 +3,10 @@
 
 <head>
 	<title>About Airsoft</title>
-	<link rel="stylesheet" type="text/css" href="styles/common.css">
-	<script src="scripts/backend-sim/account.js"></script>
-	<script src="scripts/common.js"></script>
+	<link rel="stylesheet" type="text/css" href="../styles/common.css">
+	<link rel="stylesheet" type="text/css" href="../styles/articles.css">
+	<script src="../scripts/backend-sim/account.js"></script>
+	<script src="../scripts/common.js"></script>
 </head>
 
 <body>
@@ -39,17 +40,130 @@
 			</ul>
 		</div>
 	</nav>
-	<aside class="sectionsbar">
+	<div class="pagecontainer">
+		<aside class="sidebar">
+			<div class="sidebarcontents">
+				<h4>Contents</h4>
+				<hr>
+				<ul>
+					<li><a href="#whatisairsoft">What is Airsoft?</a></li>
+					<li><a href="#equipment">Equipment</a></li>
+				</ul>
+			</div>
+		</aside>
+		<main>
+			<header>
+				<h2>About Airsoft</h2>
+			</header>
+			<hr>
+			<article>
+				<section id="whatisairsoft">
+					<h3>What is Airsoft?</h3>
+					<p>
+						Airsoft is a unique team sport that involves the use of 
+						firearm replicas. These replicas closely resemble their real
+						counterparts in appearance but employ mechanisms typical of
+						airsoft products, such as the Blow Back system or the quick
+						spring exchange system.  
+					</p>
+					<p>
+						It's important to clarify right away
+						that airsoft is somewhat similar to paintball but, at the same
+						time, differs from it.
+					</p>
+					<p>
+						One significant distinction is the 
+						type of ammunition used. Airsoft employs plastic BBs, while 
+						paintball involves shooting opponents with paint-filled projectiles.
+						This is a fundamental difference, but not the only one.
+					</p>
+				</section>
+				<section id="equipment">
+					<h3>Equipment</h3>
+					<figure>
+						<img src="../media/airsoftgunontable.jpg">
+						<figcaption>
+							Classic Army M4A1 Carbine AEG with Aimpoint Comp
+							M2 Replica Red dot sightClassic Army M4A1 Carbine AEG 
+							with Aimpoint Comp M2 Replica Red dot sight
+						</figcaption>
+					</figure>
+					<p>
+						The guns used in airsoft are typically classified as imitation
+						firearms. They have a mechanism for shooting projectiles 6 
+						mm or 8 mm in diameter.
+					</p>
+					<p>
+						Airsoft guns are classified according to their operating 
+						principle, which can be spring-loaded, electric 
+						(battery-powered Automatic Electric Guns, Airsoft Electric 
+						Guns or "AEGs"), or gas-powered, which may be referred to as 
+						Gas Blowback (GBB) if including blowback features or
+						alternatively Non-blowback (NBB) if they do not.
+						Some companies produce full replicas of counterpart grenade 
+						launchers which fire a projectile spray of 6 millimetres
+						(0.24 in) pellets by use of a high-powered spring mechanism 
+						or a compressed gas propellant (i.e. green gas, propane,
+						compressed air, or CO2). There is also a type of airsoft gun 
+						that is powered by a single (HPA) high-pressure air tank and
+						a battery pack to power the internal FCU "Fire Control Unit" 
+						computer board. These guns are often known for their high 
+						and adjustable RPS or "Rounds Per Second" and durability.
+						These HPA replicas are most often referred to as "PolarStars",
+						although this refers to a popular brand of HPA engines and 
+						accessories. 
+					</p>
+				</section>
 
-	</aside>
-	<main>
-		<header>
-			<h2>About Airsoft</h2>
-		</header>
-	</main>
-	<aside class="acessibilitybar">
+			</article>
+		</main>
+		<aside class="sidebar">
+			<div class="sidebarcontents">
+				<h4>Accesibility</h4>
+				<hr>
+				<fieldset>
+					<legend>Text Size</legend>
+						<label>
+							<ul>
+								<li>
+									<input type="radio" name="fontsizeselect" 
+									  id="selectsmall" value="small" checked/>
+									<label for="selectlight">Small</label>
+								</li>
+								<li>
+									<input type="radio" name="fontsizeselect" 
+									  id="selectmedium" value="medium"/>
+									<label for="selectlight">Medium</label>
+								</li>
+								<li>
+									<input type="radio" name="fontsizeselect"
+									  id="selectlarge" value="large"/>
+									<label for="selectlight">Large</label>
+								</li>
+							</ul>
+						</label>
+					</fieldset>
+				<fieldset>
+				<legend>Page Theme</legend>
+					<label>
+						<ul>
+							<li>
+								<input type="radio" name="pagethemeselect" id="selectlight" value="light" checked/>
+								<label for="selectlight">Light</label>
+							</li>
+							<li>
+								<input type="radio" name="pagethemeselect" id="selectdark" value="dark"/>
+								<label for="selectlight">Dark</label>
+							</li>
+						</ul>
+						
+						
+					</label>
+				</fieldset>
+			</div>
 
-	</aside>
+		</aside>
+	</div>
 	<!-- Footer -->
 	<footer class="bg-dark text-white pt-5 pb-4">
 		<div class="container">

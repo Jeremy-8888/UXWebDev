@@ -1,0 +1,21 @@
+.pagecontainer {
+	display: flex;
+}
+
+.pagecontainer>.sidebar {
+	text-align: left;
+	margin-top: 3rem;
+	margin-left: 1vw;
+	margin-right: 1vw;
+}
+
+.pagecontainer>.sidebar>.sidebarcontents {
+	position: sticky;
+	width: 10vw;
+	top: 0;
+}
+
+.pagecontainer>.sidebar ul {
+	list-style: none;
+	padding: 0px;
+}
