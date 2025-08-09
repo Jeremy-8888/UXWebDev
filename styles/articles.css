@@ -26,6 +26,10 @@ main {
 	padding: 0px;
 }
 
+.pagecontainer>.sidebar ul>li>a {
+	color: #6587dd;
+}
+
 .pagecontainer>.sidebar legend {
 	font-size:medium;
 }
@@ -55,7 +59,7 @@ main {
 }
 
 .pagecontainer>main>article>section>figure {
-	background-color: #f8f9fa;
+	background-color: #b3b3b315;
 	padding: 5px;
 	margin: 5px;
 	float: right;
@@ -76,7 +80,7 @@ main {
 }
 
 .pagecontainer>main>article>section>figure>table tr:nth-child(odd) {
-	background-color: #ebebeb;
+	background-color: #9797972f;
 }
 
 .pagecontainer>main>article>section>figure>table th:nth-child(odd) {

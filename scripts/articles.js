@@ -3,6 +3,18 @@ function setArticleFontSize(toSize) {
 	MAIN.style.fontSize = toSize;
 }
 
+function setDarkMode() {
+	const BODYSTYLE = document.getElementsByTagName("body").item(0).style;
+	BODYSTYLE.backgroundColor = "#212529";
+	BODYSTYLE.color = "#fff";
+}
+
+function setLightMode() {
+	const BODYSTYLE = document.getElementsByTagName("body").item(0).style;
+	BODYSTYLE.backgroundColor = "#fff";
+	BODYSTYLE.color = "#212529";
+}
+
 function main() {
 	document.getElementById("selectsmall").addEventListener(
 		"change", function() {setArticleFontSize("small");}
@@ -13,4 +25,7 @@ function main() {
 	document.getElementById("selectlarge").addEventListener(
 		"change", function() {setArticleFontSize("large");}
 	);
+
+	document.getElementById("selectdark").addEventListener("change", setDarkMode);
+	document.getElementById("selectlight").addEventListener("change", setLightMode);
 } window.addEventListener("load", main);
