@@ -12,18 +12,18 @@
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 		<!-- Navigation bar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="home.html">
       <i class="fas fa-crosshairs me-2"></i>NYP Airsoft Club
     </a>
-	<ul id="loginnavbaritem" class="nav navbar-nav">
-		<li><a id="navbar_login" class="nav-link" href="login.html">Log In</a></li>
-		<li><a id="navbar_signup" class="nav-link" href="login.html?signup">Sign Up</a></li>
-	</ul>
-	<ul id="accountnavbaritem" class="nav navbar-nav" style="display: none;">
-		<li><a id="accountnavbarlink" class="nav-link" href="myprofile.html"></a></li>
-	</ul>
+    <ul id="loginnavbaritem" class="nav navbar-nav">
+        <li><a id="navbar_login" class="nav-link" href="login.html">Log In</a></li>
+        <li><a id="navbar_signup" class="nav-link" href="login.html?signup">Sign Up</a></li>
+    </ul>
+    <ul id="accountnavbaritem" class="nav navbar-nav" style="display: none;">
+        <li><a id="accountnavbarlink" class="nav-link" href="myprofile.html"></a></li>
+    </ul>
     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
       <li><a class="nav-link" href="home.html">Home</a>
       </li>
@@ -38,14 +38,26 @@
   </div>
 </nav>
 
-<header class="content text-center py-5 fade-in-content">
-    <div class="container">
-        <h1 class="display-4 fw-bold mb-4" style="color: #022b16; text-shadow: 1px 1px 3px rgba(0,0,0,0.1);">About Our Club</h1>
-        <p class="lead mx-auto" style="max-width: 800px; color: #495057; font-size: 1.2rem; line-height: 1.6;"> Founded in 2015, the NYP Airsoft Club is a dynamic student-led community dedicated to tactical training, teamwork, and discipline through safe airsoft activities. Any student with an interest in airsoft is welcomed! We host weekly drills, scenario-based games, and inter-school tournaments. Join us to sharpen your mind and reflexes!</p>
+<!-- Hero Video Section -->
+ <!-- this is the video i used https://youtu.be/eMxj3q9JLzc?si=gCfH3fDyj_Y3mz8I -->
+<section class="hero-section" class="container mt-4 fadeInFromTop">
+    <video autoplay muted loop playsinline class="w-100">
+        <source src="media/AboutDrone.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="content text-center py-5 fade-in-content">
+        <h1 class="hero-title" style="color: #fff; text-shadow: 2px 2px 8px #000;">About Our Club</h1>
+        <p class="hero-subtitle" style="color: #fff; text-shadow: 1px 1px 6px #000;">
+            Founded in 2015, the NYP Airsoft Club is a dynamic student-led community dedicated to tactical training, teamwork, and discipline through safe airsoft activities. Any student with an interest in airsoft is welcomed! We host weekly drills, scenario-based games, and inter-school tournaments. Join us to sharpen your mind and reflexes!
+        </p>
     </div>
+</section>
+
+<main class="container mt-4 fadeInFromTop">
+   
 </header>
 
-<main class="container">
+    <!-- Our Objectives -->
     <section class="card mb-4 border-0">
         <div class="card-body">
             <h2 class="card-title">Our Objectives</h2>
@@ -246,5 +258,6 @@
 
     <!-- Bootstrap 5 JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/common.js"></script>
 </body>
 </html>
