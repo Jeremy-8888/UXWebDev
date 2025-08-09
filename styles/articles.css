@@ -11,11 +11,79 @@
 
 .pagecontainer>.sidebar>.sidebarcontents {
 	position: sticky;
+	top: 3rem;
 	width: 10vw;
-	top: 0;
 }
 
 .pagecontainer>.sidebar ul {
+	line-height: 1.75em;
 	list-style: none;
 	padding: 0px;
+}
+
+.pagecontainer>.sidebar legend {
+	font-size:medium;
+}
+
+.pagecontainer>main>article>hr {
+	margin-left: 2vw;
+	margin-right: 2vw;
+	border-style: dotted;
+}
+
+.pagecontainer>main>article>section {
+	padding-right: 2vw;
+	padding-left: 2vw;
+	height: max-content;
+}
+
+.pagecontainer>main>article>section::after {
+	content: ''; 
+	display: block; 
+	clear: both;
+}
+
+.pagecontainer>main>article>section:hover {
+	transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	transform: translateY(-8px);
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.pagecontainer>main>article>section>figure {
+	background-color: #f8f9fa;
+	padding: 5px;
+	margin: 5px;
+	float: right;
+	display: flex;
+	flex-flow: column;
+	border: thin silver solid;
+}
+
+.pagecontainer>main>article>section>figure>img {
+	flex-shrink: 0;
+}
+
+.pagecontainer>main>article>section>figure>h5 {
+	text-align: center;
+	font-weight: bold;
+	margin-top: 5px;
+	line-height: 0.5em;
+}
+
+.pagecontainer>main>article>section>figure>table tr:nth-child(odd) {
+	background-color: #ebebeb;
+}
+
+.pagecontainer>main>article>section>figure>table th:nth-child(odd) {
+	width: 30%;
+}
+
+.pagecontainer>main>article>section>figure>table th:nth-child(even) {
+	text-align: center;
+	font-weight: 400;
+}
+
+
+.pagecontainer>main>article>section>figure>figcaption {
+	text-align: center;
 }
