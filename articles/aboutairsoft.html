@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="../styles/articles.css">
 	<script src="../scripts/backend-sim/account.js"></script>
 	<script src="../scripts/common.js"></script>
+	<script src="../scripts/articles.js"></script>
 </head>
 
 <body>
@@ -187,18 +188,27 @@
 							<ul>
 								<li>
 									<input type="radio" name="fontsizeselect" 
-									  id="selectsmall" value="small" checked/>
-									<label for="selectlight">Small</label>
+									  class="form-check-input" id="selectsmall"
+									  value="small" checked/>
+									<label for="selectsmall" class="form-check-label">
+										Small
+									</label>
 								</li>
 								<li>
 									<input type="radio" name="fontsizeselect" 
-									  id="selectmedium" value="medium"/>
-									<label for="selectlight">Medium</label>
+									  class="form-check-input" id="selectmedium"
+									  value="medium"/>
+									<label for="selectmedium" class="form-check-label">
+										Medium
+									</label>
 								</li>
 								<li>
 									<input type="radio" name="fontsizeselect"
-									  id="selectlarge" value="large"/>
-									<label for="selectlight">Large</label>
+									  class="form-check-input" id="selectlarge" 
+									  value="large"/>
+									<label for="selectlarge" class="form-check-label">
+										Large
+									</label>
 								</li>
 							</ul>
 						</label>
@@ -208,12 +218,20 @@
 					<label>
 						<ul>
 							<li>
-								<input type="radio" name="pagethemeselect" id="selectlight" value="light" checked/>
-								<label for="selectlight">Light</label>
+								<input type="radio" name="pagethemeselect" 
+								  class="form-check-input" id="selectlight"
+								  value="light" checked/>
+								<label for="selectlight" class="form-check-label">
+									Light
+								</label>
 							</li>
 							<li>
-								<input type="radio" name="pagethemeselect" id="selectdark" value="dark"/>
-								<label for="selectlight">Dark</label>
+								<input type="radio" name="pagethemeselect" 
+								class="form-check-input" id="selectdark"
+								value="dark"/>
+								<label for="selectdark" class="form-check-label">
+									Dark
+								</label>
 							</li>
 						</ul>
 					</label>
