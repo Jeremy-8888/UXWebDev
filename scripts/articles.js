@@ -5,14 +5,14 @@ function setArticleFontSize(toSize) {
 
 function setDarkMode() {
 	const BODYSTYLE = document.getElementsByTagName("body").item(0).style;
-	BODYSTYLE.backgroundColor = "#212529";
+	BODYSTYLE.backgroundColor = "#1f2022";
 	BODYSTYLE.color = "#fff";
 }
 
 function setLightMode() {
 	const BODYSTYLE = document.getElementsByTagName("body").item(0).style;
 	BODYSTYLE.backgroundColor = "#fff";
-	BODYSTYLE.color = "#212529";
+	BODYSTYLE.color = "#202325ff";
 }
 
 function main() {
