@@ -79,10 +79,14 @@
 	flex-direction: row;
 	align-items: center;
 	width: 75vw;
-	height: 230px;
+	height: 260px;
 	overflow-y: auto;
 	text-decoration: none;
 	color: black;
+	border: 1px inset #88888854;
+	border-radius: 40px;
+	border-left: none;
+	border-right: none;
 }
 
 .articleitem>img {
@@ -104,6 +108,7 @@
 	cursor: pointer;
 	transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	transform: translateY(-8px);
+	border: none;
 	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
 }
 
