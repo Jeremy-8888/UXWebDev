@@ -275,55 +275,61 @@
 .hero-section {
   position: relative;
   overflow: hidden;
-  padding-top: 0;
-  height: 200px;
+  height: 500px;
   background-color: #022b16;
   margin-top: 0 !important;
+  padding-top: 0;
 }
 
 .hero-section video {
   position: absolute;
-  top: 0; 
-  left: 0; 
-  width: 100%; 
-  height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   object-fit: cover;
   z-index: 0;
-  -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 60%, rgba(0,0,0,0.5) 80%, transparent 100%);
-  mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 50%, rgba(0,0,0,0.5) 80%, transparent 100%);
 }
 
 .hero-section::after {
   content: '';
   position: absolute;
-  top: 0; 
-  left: 0; 
-  right: 0; 
-  bottom: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  z-index: 1;
   background: linear-gradient(
     to bottom,
-    transparent 0%,                 /* transparent at top to show video */
-    transparent 40%,                /* keep video visible */
-    rgba(255, 255, 255, 0.3) 60%,  /* start white fade */
-    rgba(255, 255, 255, 0.7) 80%,  /* stronger white */
-    rgba(255, 255, 255, 0.95) 95%, /* almost solid white */
-    #ffffff 100%                   /* solid white at bottom */
+    rgba(255,255,255,0) 60%,
+    rgba(255,255,255,0.7) 85%,
+    #fff 100%
   );
-  z-index: 1;
-  pointer-events: none;
 }
 
-/* Responsive adjustments for hero section */
-@media (max-width: 768px) {
-  .hero-section {
-    height: 250px; /* Reduced from 400px to 250px */
-  }
+.hero-section .container,
+.hero-section .content {
+  position: relative;
+  z-index: 2; /* Make sure text is above the gradient */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-@media (max-width: 576px) {
-  .hero-section {
-    height: 200px; /* Reduced from 350px to 200px */
-  }
+.hero-title {
+  color: #fff;
+  text-shadow: 2px 2px 8px #000;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  color: #fff;
+  text-shadow: 1px 1px 6px #000;
+  font-size: 1.2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
 /* Cards */
